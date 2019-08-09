@@ -41,7 +41,7 @@ html body::selection { color: white; background-color: #78baff; }
 @media screen and (max-width: 829px) and (min-width: 0) { .list .list-detail td { display: inline-block; width: 100%; border-bottom: none; }
   .list .list-detail td.datetime { position: relative; padding-bottom: 0; }
   .list .list-detail td.datetime i { position: absolute; display: inline-block; top: 10px; right: 10px; line-height: 25px; color: gray; }
-  .list .list-detail td[data-title] { width: calc(50% - 5px); height: 26px; line-height: 26px; padding-top: 0; font-size: 13px; }
+  .list .list-detail td[data-title] { width: calc(50% - 5px); height: 26px; line-height: 26px; padding-top: 0; font-size: 14px; }
   .list .list-detail td[data-title]:before { display: inline-block; content: attr(data-title); width: 50px; color: #adadad; }
   .list .list-detail td.flight .flight-block { display: none; }
   .list .list-detail td.flight .flight-block.active { display: inline-block; }
