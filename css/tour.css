@@ -1,0 +1,19 @@
+@charset "UTF-8";
+*, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
+
+html { position: relative; }
+html body { position: relative; display: inline-block; width: 100%; margin: 0; background-color: #e8e8e8; color: #5a5a5a; text-align: center; font-size: medium; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; }
+html body::-moz-selection { color: white; background-color: #78baff; }
+html body::selection { color: white; background-color: #78baff; }
+
+.bg { position: fixed; top: 0; left: 0; width: 100%; height: 550px; z-index: 1; display: inline-block; overflow: hidden; }
+.bg figure { margin: 0; display: inline-block; width: calc(100% + 20px); height: 100%; margin-left: -10px; filter: blur(4px); background-size: cover; background-position: center center; background-repeat: no-repeat; }
+
+.header-banner { position: fixed; display: inline-block; top: 0; left: 0; width: 100%; height: 50px; background-color: #ffffffe8; box-shadow: 1px 1px 1px #80808038; z-index: 5; }
+
+.block { position: relative; display: inline-block; width: 100%; height: 2000px; background-color: white; margin-top: 500px; z-index: 3; }
+.block .brief { position: absolute; top: -500px; left: 0; display: inline-block; z-index: 2; width: 50%; height: 450px; float: left; margin-top: 50px; }
+.block .brief label { display: inline-block; width: 400px; height: 100%; background-color: rgba(255, 255, 255, 0.55); padding: 40px; text-align: left; }
+.block .brief label > * { display: inline-block; writing-mode: vertical-lr; letter-spacing: 2px; }
+.block .brief label b.main-title { font-size: 55px; font-weight: normal; color: black; }
+.block .brief label span.sub-title { font-size: 24px; font-weight: lighter; margin-top: 74px; }
