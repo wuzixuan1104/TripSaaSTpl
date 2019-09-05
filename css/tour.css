@@ -13,7 +13,9 @@ html body::selection { color: white; background-color: #78baff; }
 
 .block { position: relative; display: inline-block; width: 100%; height: 2000px; background-color: white; margin-top: 500px; z-index: 3; }
 .block .brief { position: absolute; top: -500px; left: 0; display: inline-block; z-index: 2; width: 50%; height: 450px; float: left; margin-top: 50px; }
-.block .brief label { display: inline-block; width: 400px; height: 100%; background-color: rgba(255, 255, 255, 0.55); padding: 40px; text-align: left; }
-.block .brief label > * { display: inline-block; writing-mode: vertical-lr; letter-spacing: 2px; }
-.block .brief label b.main-title { font-size: 55px; font-weight: normal; color: black; }
-.block .brief label span.sub-title { font-size: 24px; font-weight: lighter; margin-top: 74px; }
+.block .brief label { position: relative; display: inline-block; width: 400px; height: 100%; background-color: rgba(255, 255, 255, 0.55); padding: 40px; text-align: left; }
+.block .brief label > * { display: inline-block; letter-spacing: 2px; }
+.block .brief label b.main-title { font-size: 55px; font-weight: normal; color: black; writing-mode: vertical-lr; }
+.block .brief label span.sub-title { font-size: 24px; font-weight: lighter; margin-top: 74px; writing-mode: vertical-lr; }
+.block .brief label .tag { position: absolute; display: inline-block; width: 340px; bottom: 20px; left: 426px; }
+.block .brief label .tag > * { display: inline-block; color: white; background-color: #0000008c; text-decoration: none; padding: 6px 12px; border-radius: 15px; font-size: 13px; margin-top: 5px; }

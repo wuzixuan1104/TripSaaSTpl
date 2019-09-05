@@ -78,6 +78,7 @@ html {
         margin-top: 50px;
 
         label {
+            position: relative;
             display: inline-block;
             width: 400px;
             height: 100%;
@@ -86,18 +87,39 @@ html {
             text-align: left;
             > * {
                 display: inline-block;
-                writing-mode: vertical-lr;
                 letter-spacing: 2px;
             }
             b.main-title {
                 font-size: 55px;
                 font-weight: normal;
                 color: black;
+                writing-mode: vertical-lr;
+
             }
             span.sub-title {
                 font-size: 24px;
                 font-weight: lighter;
                 margin-top: 74px;
+                writing-mode: vertical-lr;
+
+            }
+
+            .tag {
+                position: absolute;
+                display: inline-block;
+                width: 340px;
+                bottom: 20px;
+                left: 426px;
+                > * {
+                    display: inline-block;
+                    color: white;
+                    background-color: #0000008c;
+                    text-decoration: none;
+                    padding: 6px 12px;
+                    border-radius: 15px;
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
             }
         }
     }
