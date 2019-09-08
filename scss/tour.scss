@@ -122,6 +122,28 @@ html {
                 }
             }
         }
+
+        @include range-width(0, 800px) {
+            width: 100%;
+            height: 300px;
+            top: -350px;
+            label {
+                width: 100%;
+                .tag {
+                    display: none;
+                }
+
+                b.main-title {
+                    font-size: 30px;
+                }
+                span.sub-title {
+                    font-size: 15px;
+                }
+            }
+        }   
+    }
+    @include range-width(0, 800px) {
+        margin-top: 350px;
     }
 }
 

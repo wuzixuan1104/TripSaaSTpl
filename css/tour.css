@@ -19,3 +19,9 @@ html body::selection { color: white; background-color: #78baff; }
 .block .brief label span.sub-title { font-size: 24px; font-weight: lighter; margin-top: 74px; writing-mode: vertical-lr; }
 .block .brief label .tag { position: absolute; display: inline-block; width: 340px; bottom: 20px; left: 426px; }
 .block .brief label .tag > * { display: inline-block; color: white; background-color: #0000008c; text-decoration: none; padding: 6px 12px; border-radius: 15px; font-size: 13px; margin-top: 5px; }
+@media screen and (max-width: 799px) and (min-width: 0) { .block .brief { width: 100%; height: 300px; top: -350px; }
+  .block .brief label { width: 100%; }
+  .block .brief label .tag { display: none; }
+  .block .brief label b.main-title { font-size: 30px; }
+  .block .brief label span.sub-title { font-size: 15px; } }
+@media screen and (max-width: 799px) and (min-width: 0) { .block { margin-top: 350px; } }

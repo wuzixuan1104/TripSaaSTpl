@@ -1,0 +1,231 @@
+@import "Ginkgo";
+
+html {
+  position: relative;
+
+  body {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+
+    margin: 0;
+
+    background-color: rgba(255, 255, 255, .9);
+    color: rgba(90, 90, 90, 1.00);
+    text-align: center;
+    font-size: medium;
+    font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+    
+    // 文字染色，背景色、文字色
+    @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
+  }
+}
+
+$main-padding: 20px 100px;
+.navigate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: inline-block;
+  width: 100%;
+  height: 80px;
+  padding: $main-padding;
+
+  &.active {
+    background-color: rgba(255, 255, 255, 0.81);
+    > * {
+      color: gray;
+    }
+    .menu {
+      a {
+        color: gray;
+      }
+    }
+  }
+  > * {
+    display: inline-block;
+    float: left;
+    line-height: 40px;
+    height: 100%;
+    color: white;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .menu {
+    float: right;
+    a {
+      color: white;
+      text-decoration: none;
+      + a {
+        margin-left: 30px;
+      }
+
+      &.active {
+        color: #ffa900;
+      }
+    }
+  }
+}
+
+.stage-outer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 700px;
+  z-index: 1;
+
+  .stage-item {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &.active {
+      display: inline-block;
+    }
+    figure {
+      margin: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .2;
+      }
+    }
+
+  }
+
+  .circle-spot {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    > * {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      line-height: 50px;
+      background-color: rgba(255, 255, 255, 0.26);
+      border-radius: 50%;
+
+      &.active {
+        background-color: rgba(247, 202, 106, 1.00);
+      }
+      + * {
+        margin-left: 10px;
+      }
+    }
+  }
+  .main-topic {
+    display: inline-block;
+    width: 100%;
+    margin-top: 226px;
+    padding: $main-padding;
+    > * {
+      position: relative;
+      z-index: 2;
+      letter-spacing: 5px;
+      color: white;
+      text-align: left;
+    }
+    h1 {
+      font-size: 50px;
+      // font-weight: lighter;
+      margin: 0 auto;
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      font-size: 23px;
+      margin-top: 10px;
+      color: #b1b1b1;
+      text-align: left;
+    }
+  }
+}
+
+.search-block {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  padding: $main-padding;
+
+  .search-tab {
+    position: absolute;
+    top: -50px;
+    left: 60px;
+    display: inline-block;
+    z-index: 2;
+    margin: 0 auto;
+
+    > * {
+      display: inline-block;
+      float: left;
+      background-color: white;
+      height: 50px;
+      padding: 0 40px;
+      letter-spacing: 6px;
+      font-size: 16px;
+      line-height: 50px;
+      color: rgba(248, 197, 110, 1.00);
+      &.active {
+        background: rgba(247, 202, 106, 1.00);
+        color: white;
+        height: 60px;
+        line-height: 60px;
+        margin-top: -10px;
+      }
+
+      + * {
+      }
+    }
+  }
+}
+
+body.orange {
+  .navigate { 
+    &.active {
+      // background-color: rgba(255, 152, 19, 0.65);
+    }
+  }
+  .stage-outer {
+    .stage-item {
+      figure {
+        &:before {
+          background-color: rgba(208, 115, 15, 0.34);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
