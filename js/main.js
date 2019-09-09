@@ -18,7 +18,7 @@ $(function() {
     }, 5000);
 
     $(window).on('scroll', function () {
-        let scrollPosition = window.scrollY;
+        var scrollPosition = window.scrollY;
 
         if (scrollPosition > 200) {
             $('.navigate').addClass('active');
