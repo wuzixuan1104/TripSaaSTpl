@@ -11,10 +11,13 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/main.js"></script>
   </head>
   <body class="orange">
     <nav class="navigate">
       <div class="logo">Shari's Trip</div>
+      <input id="chk-menu" type="checkbox">
+      <label for="chk-menu" class="icon-menu">選單</label>
       <div class="menu">
         <a href="#" class="active">首頁</a>
         <a href="#">行程</a>
@@ -26,11 +29,19 @@
     </nav>
     <div class="stage-outer">
       <div class="main-topic">
-        <h1>Shari's Trip</h1>
-        <span>全新旅遊電商系統</span>
+        <h1>開始一段美好的旅行</h1>
+        <span>將您的夢變成一段真實的體驗，我們掌握今年冬季最受追捧的度假勝地，完成夢想就找我們</span>
       </div>
-      <div class="stage-item active">
-        <figure style="background-image:url(https://de0s2vtm6rzpn.cloudfront.net/b2b/event_block/4635/search1/4635search11561022304_rsz.jpg)"></figure>
+      <div class="stage-slides">
+        <div class="stage-item active">
+          <figure style="background-image:url(https://de0s2vtm6rzpn.cloudfront.net/b2b/event_block/4635/search1/4635search11561022304_rsz.jpg)"></figure>
+        </div>
+        <div class="stage-item">
+          <figure style="background-image:url(http://d2.tripsaas.com/protected/img/white_label_front/default_img/default_bg5.jpg)"></figure>
+        </div>
+        <div class="stage-item">
+          <figure style="background-image:url(http://d2.tripsaas.com/protected/img/white_label_front/default_img/default_bg1.jpg)"></figure>
+        </div>
       </div>
       <ol class="circle-spot">
         <li class="active"></li>
@@ -43,11 +54,12 @@
         <li class="active">團旅</li>
         <li>飯店</li>
       </ul>
-     <!--  <form>
+      <form>
         <input type="text" placeholder="輸入目的地...">
-        <input type="date" placeholder="開始日期">
-        <input type="date" placeholder="結束日期">
-      </form> -->
+        <input type="text" placeholder="開始日期">
+        <input type="text" placeholder="結束日期">
+        <button type="button" class="icon-search">搜尋</button>
+      </form>
     </div>
   </body>
 </html>

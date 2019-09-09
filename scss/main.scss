@@ -23,8 +23,10 @@ html {
 }
 
 $main-padding: 20px 100px;
+$mobile-main-padding: 20px;
+
 .navigate {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
@@ -32,9 +34,16 @@ $main-padding: 20px 100px;
   width: 100%;
   height: 80px;
   padding: $main-padding;
+  transition: .3s all ease-out;
+
+  @include range-width(0, 1000px) {
+    padding: $mobile-main-padding;
+  }
 
   &.active {
-    background-color: rgba(255, 255, 255, 0.81);
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 1px 12px rgba(64, 64, 64, 0.51);
     > * {
       color: gray;
     }
@@ -44,6 +53,7 @@ $main-padding: 20px 100px;
       }
     }
   }
+
   > * {
     display: inline-block;
     float: left;
@@ -56,6 +66,21 @@ $main-padding: 20px 100px;
     font-size: 20px;
     font-weight: bold;
   }
+  #chk-menu {
+    display: none;
+    z-index: -999999;
+  }
+
+  label.icon-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: none;
+
+    &:before {
+      margin-right: 5px;
+    }
+  }
   .menu {
     float: right;
     a {
@@ -67,6 +92,59 @@ $main-padding: 20px 100px;
 
       &.active {
         color: #ffa900;
+      }
+
+      &:hover {
+        color: rgb(195, 195, 195);
+      }
+    }
+  }
+  @include range-width(0, 720px) {
+    position: fixed;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 1px 12px rgba(64, 64, 64, 0.51);
+
+    > * {
+      color: gray;
+    }
+    
+    .logo {
+      line-height: 20px;
+    }
+
+    label.icon-menu { 
+      display: inline-block;
+    }
+
+    .menu {
+      position: fixed;
+      z-index: 0;
+      top: -400px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-color: rgba(255, 255, 255, 0.88);
+      padding: 10px 20px;
+      opacity: 0;
+      transition: top .3s;
+
+      a {
+        display: block;
+        text-align: left;
+        color: gray;
+        + a {
+          margin-left: 0;
+        }
+      }
+    }
+
+    #chk-menu {
+      &:checked {
+        ~ .menu { 
+          top: 60px;
+          opacity: 1;
+        }
       }
     }
   }
@@ -81,15 +159,18 @@ $main-padding: 20px 100px;
 
   .stage-item {
     position: absolute;
-    display: none;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    // transition: .10s all ease-out;
+    @include opacity(0);
+    @include transition(opacity 5s);
 
     &.active {
-      display: inline-block;
+      @include opacity(1);
     }
+
     figure {
       margin: 0;
       display: inline-block;
@@ -110,14 +191,16 @@ $main-padding: 20px 100px;
         width: 100%;
         height: 100%;
         background-color: #000;
-        opacity: .2;
+        opacity: .5;
       }
     }
 
   }
 
   .circle-spot {
-    position: relative;
+    position: absolute;
+    left: 0;
+    bottom: 150px;
     display: inline-block;
     z-index: 3;
     width: 100%;
@@ -137,6 +220,10 @@ $main-padding: 20px 100px;
       + * {
         margin-left: 10px;
       }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   .main-topic {
@@ -144,6 +231,10 @@ $main-padding: 20px 100px;
     width: 100%;
     margin-top: 226px;
     padding: $main-padding;
+
+    @include range-width(0, 1000px) {
+      padding: $mobile-main-padding;
+    }
     > * {
       position: relative;
       z-index: 2;
@@ -155,14 +246,34 @@ $main-padding: 20px 100px;
       font-size: 50px;
       // font-weight: lighter;
       margin: 0 auto;
+      font-weight: normal;
     }
     span {
       display: inline-block;
       width: 100%;
       font-size: 23px;
       margin-top: 10px;
-      color: #b1b1b1;
+      color: white;
       text-align: left;
+      font-weight: lighter;
+    }
+    
+  }
+  @include range-width(0, 720px) {
+    height: 550px;
+    .circle-spot {
+      padding: 0;
+      bottom: 115px;
+    }
+
+    .main-topic {
+      margin-top: 180px;
+      h1 {
+        font-size: 30px;
+      }
+      span {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -171,10 +282,14 @@ $main-padding: 20px 100px;
   position: relative;
   display: inline-block;
   width: 100%;
-  height: 100px;
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   padding: $main-padding;
+  padding-left: 80px;
+  padding-right: 80px;
 
+  @include range-width(0, 1000px) {
+    padding: $mobile-main-padding;
+  }
   .search-tab {
     position: absolute;
     top: -50px;
@@ -182,6 +297,11 @@ $main-padding: 20px 100px;
     display: inline-block;
     z-index: 2;
     margin: 0 auto;
+
+    @include range-width(0, 1000px) {
+      padding: 0;
+      left: 20px;
+    }
 
     > * {
       display: inline-block;
@@ -202,6 +322,98 @@ $main-padding: 20px 100px;
       }
 
       + * {
+      }
+    }
+
+    @include range-width(0, 720px) {
+      top: -40px;
+      > * {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        &.active {
+          height: 50px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    justify-content: space-evenly;
+
+    > * {
+      margin: 20px;
+      padding: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+
+      border: 2px solid rgba(255, 255, 225, 0.9);
+      background-color: transparent;
+      color: white;
+      font-size: 16px;
+      padding: 0 15px;
+
+      transition: box-shadow .3s, border-color .3s;
+
+      &:focus {
+        outline: 0;
+        border: 2px solid rgba(255, 255, 255, 1.00);
+        box-shadow: 0 0 8px rgba(red(rgba(255, 255, 255, 1.00)), green(rgba(255, 255, 255, 1.00)), blue(rgba(255, 255, 255, 1.00)), .6);
+      }
+
+      @include input-placeholder {
+        font-weight: normal;
+        color: rgba(255, 255, 225, .9);
+        font-size: 16px;
+      }
+    }
+
+    button {
+      display: inline-flex;
+      width: 350px;
+      height: 50px;
+      background-color: white;
+      border: none;
+      font-size: 16px;
+      line-height: 33px;
+      box-shadow: 1px 1px 12px #8a8a8a91;
+      color: #696969;
+      border-radius: 5px;
+      text-align: center;
+      &:before {
+        font-size: 16px;
+        margin: 0 5px;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    @include range-width(720px, 900px) {
+      > * {
+        margin: 10px;
+      }
+    }
+
+    @include range-width(0, 720px) {
+      flex-direction: column;
+      > * {
+        margin: 10px;
+      }
+      input[type="text"] {
+        height: 40px;
+        width: auto;
+      }
+      button {
+        display: inline-block;
+        width: auto;
+        height: 40px;
+        line-height: 23px;
       }
     }
   }
