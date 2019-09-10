@@ -493,7 +493,7 @@ figure {
       height: 70px;
       left: calc(50% - 35px);
       top: 264px;
-      
+
       &:before {
         line-height: 70px;
       }
@@ -534,7 +534,8 @@ figure {
       height: 300px;
     }
     .text-block {
-      padding-left: 50px;
+      padding: 30px;
+      padding-left: 30px;
       p {
         height: auto;
         -webkit-line-clamp: 100;
@@ -542,6 +543,10 @@ figure {
       }
     }
   }
+}
+
+.video-block {
+
 }
 
 .hot-spot-block {
@@ -679,6 +684,7 @@ figure {
   }
 }
 
+/* theme */
 body.orange {
   .navigate { 
     &.active {
