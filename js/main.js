@@ -22,8 +22,10 @@ $(function() {
 
         if (scrollPosition > 200) {
             $('.navigate').addClass('active');
+            $('.totop').addClass('active');
         } else {
             $('.navigate').removeClass('active');
+            $('.totop').removeClass('active');
         }
     });
 
@@ -40,6 +42,8 @@ $(function() {
         $(this).parent().removeClass('active');
     });
 
-
+    $('.totop').click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+    });
 
 });
