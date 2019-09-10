@@ -26,4 +26,8 @@ $(function() {
             $('.navigate').removeClass('active');
         }
     });
+
+    $('.hot-spot-block .photos-block .box').click(function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
 });

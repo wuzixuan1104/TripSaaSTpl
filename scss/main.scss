@@ -138,7 +138,7 @@ figure {
       height: auto;
       background-color: rgba(255, 255, 255, 0.88);
       padding: 10px 20px;
-      opacity: 0;
+      opacity: .5;
       transition: top .3s;
 
       a {
@@ -589,6 +589,17 @@ figure {
       position: relative;
       overflow: hidden;
 
+      .open-detail {
+        position: absolute;
+        display: none;
+        transform: rotate(90deg);
+        top: 30px;
+        left: calc(50% - 15px);
+        color: white;
+        &:before {
+          font-size: 25px;
+        }
+      }
       figure {
         position: relative;
         &:before {
@@ -612,10 +623,10 @@ figure {
         padding: 10px 20px;
         transition: bottom .2s;
 
-        @include range-width(0, 700px) {
-          height: 200px;
-          bottom: -96px;
-        }
+        // @include range-width(0, 700px) {
+        //   height: 200px;
+        //   bottom: -96px;
+        // }
         > * {
           display: block;
           text-align: left;
@@ -667,7 +678,7 @@ figure {
 
         }
       }
-      &:hover {
+      &:hover, &.active {
         .box-detail {
           bottom: 0;
           cursor: pointer;
@@ -678,6 +689,16 @@ figure {
             color: rgb(90, 90, 90);
             margin-bottom: 20px;
           }
+        }
+      }
+
+      @include range-width(0, 700px) {
+        .box-detail { 
+          height: 200px;
+          bottom: -96px;
+        }
+        .open-detail {
+          display: inline-block;
         }
       }
     }

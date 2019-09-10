@@ -27,7 +27,7 @@ figure { margin: 0; display: inline-block; width: 100%; height: 100%; overflow: 
   .navigate > * { color: gray; }
   .navigate .logo { line-height: 20px; }
   .navigate label.icon-menu { display: inline-block; }
-  .navigate .menu { position: fixed; z-index: 0; top: -400px; left: 0; width: 100%; height: auto; background-color: rgba(255, 255, 255, 0.88); padding: 10px 20px; opacity: 0; transition: top .3s; }
+  .navigate .menu { position: fixed; z-index: 0; top: -400px; left: 0; width: 100%; height: auto; background-color: rgba(255, 255, 255, 0.88); padding: 10px 20px; opacity: .5; transition: top .3s; }
   .navigate .menu a { display: block; text-align: left; color: gray; }
   .navigate .menu a + a { margin-left: 0; }
   .navigate #chk-menu:checked ~ .menu { top: 60px; opacity: 1; } }
@@ -110,18 +110,21 @@ figure { margin: 0; display: inline-block; width: 100%; height: 100%; overflow: 
 @media screen and (max-width: 1199px) and (min-width: 700px) { .hot-spot-block .photos-block > * { flex-basis: calc(100% / 2); } }
 @media screen and (max-width: 699px) and (min-width: 0) { .hot-spot-block .photos-block > * { flex-basis: 100%; height: 200px; } }
 .hot-spot-block .photos-block .box { position: relative; overflow: hidden; }
+.hot-spot-block .photos-block .box .open-detail { position: absolute; display: none; transform: rotate(90deg); top: 30px; left: calc(50% - 15px); color: white; }
+.hot-spot-block .photos-block .box .open-detail:before { font-size: 25px; }
 .hot-spot-block .photos-block .box figure { position: relative; }
 .hot-spot-block .photos-block .box figure:before { position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%); opacity: .8; }
 .hot-spot-block .photos-block .box .box-detail { position: absolute; width: 100%; bottom: -150px; left: 0; height: 250px; padding: 10px 20px; transition: bottom .2s; }
-@media screen and (max-width: 699px) and (min-width: 0) { .hot-spot-block .photos-block .box .box-detail { height: 200px; bottom: -96px; } }
 .hot-spot-block .photos-block .box .box-detail > * { display: block; text-align: left; letter-spacing: 2px; }
 .hot-spot-block .photos-block .box .box-detail b { position: relative; margin-bottom: 100px; font-size: 17px; color: white; z-index: 4; max-height: 75px; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
 .hot-spot-block .photos-block .box .box-detail .dates { position: relative; z-index: 4; display: inline-block; width: 100%; font-size: 12px; color: white; }
 .hot-spot-block .photos-block .box .box-detail .dates > * { display: inline-block; padding: 5px 10px; border-radius: 15px; text-decoration: none; color: white; background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); margin-top: 5px; }
 .hot-spot-block .photos-block .box .box-detail .dates > * + * { margin-left: 5px; }
 .hot-spot-block .photos-block .box .box-detail span.price { position: absolute; bottom: 20px; right: 20px; font-weight: bold; font-size: 20px; color: #ffb047; z-index: 4; transition: opacity .2s; }
-.hot-spot-block .photos-block .box:hover .box-detail { bottom: 0; cursor: pointer; background-color: rgba(255, 255, 255, 0.95); padding: 20px; }
-.hot-spot-block .photos-block .box:hover .box-detail b { color: #5a5a5a; margin-bottom: 20px; }
+.hot-spot-block .photos-block .box:hover .box-detail, .hot-spot-block .photos-block .box.active .box-detail { bottom: 0; cursor: pointer; background-color: rgba(255, 255, 255, 0.95); padding: 20px; }
+.hot-spot-block .photos-block .box:hover .box-detail b, .hot-spot-block .photos-block .box.active .box-detail b { color: #5a5a5a; margin-bottom: 20px; }
+@media screen and (max-width: 699px) and (min-width: 0) { .hot-spot-block .photos-block .box .box-detail { height: 200px; bottom: -96px; }
+  .hot-spot-block .photos-block .box .open-detail { display: inline-block; } }
 
 /* theme */
 body.orange .stage-outer .stage-item figure:before { background-color: rgba(208, 115, 15, 0.34); }
