@@ -147,5 +147,22 @@ figure { margin: 0; display: inline-block; width: 100%; height: 100%; overflow: 
 .brand-block .banner-main .banner-item:hover { transform: scale(1.1); }
 .brand-block ::-webkit-scrollbar { width: 0px; /* Remove scrollbar space */ background: transparent; /* Optional: just make scrollbar invisible */ }
 
+.about-block { display: flex; width: 100%; flex-wrap: wrap; }
+.about-block .about-item { display: inline-block; width: 25%; padding: 50px; }
+.about-block .about-item h3 { color: #4e4e4e; letter-spacing: 3px; }
+.about-block .about-item p { color: #666666; line-height: 30px; }
+.about-block .about-item:first-child { background-color: #f7f7f7; }
+.about-block[data-total="3"] .about-item { width: 33%; }
+@media screen and (max-width: 1199px) and (min-width: 720px) { .about-block .about-item { width: 50%; } }
+@media screen and (max-width: 719px) and (min-width: 0) { .about-block .about-item { width: 100%; padding: 20px; }
+  .about-block[data-total="3"] .about-item { width: 100%; padding: 20px; } }
+
+.video-popup { position: fixed; display: inline-block; background-color: rgba(0, 0, 0, 0.78); z-index: 0; top: 50%; left: 50%; width: 0; height: 0; overflow: hidden; opacity: 0; transition: top .5s, left .5s, width .5s, height .5s, opacity .5s; }
+.video-popup.active { top: 0; left: 0; width: 100%; height: 100%; opacity: 1; padding: 100px 80px; z-index: 99; }
+.video-popup .video-content { display: inline-block; width: 100%; height: 500px; background-color: white; }
+.video-popup .video-content iframe { display: inline-block; width: 100%; height: 100%; }
+.video-popup .close { position: fixed; display: inline-block; top: 20px; right: 20px; }
+.video-popup .close:before { color: white; }
+
 /* theme */
 body.orange .stage-outer .stage-item figure:before { background-color: rgba(208, 115, 15, 0.34); }

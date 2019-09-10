@@ -1,0 +1,43 @@
+//
+// @author      OA Wu <comdan66@gmail.com>
+// @copyright   Copyright (c) 2015 - 2019, Ginkgo
+// @license     http://opensource.org/licenses/MIT  MIT License
+// @link        https://www.ioa.tw/
+//
+
+@import "compass/css3/font-face";
+
+@include font-face("icon-icomoon1", font-files(
+  "icomoon1/fonts/icomoon.eot",
+  "icomoon1/fonts/icomoon.woff",
+  "icomoon1/fonts/icomoon.ttf",
+  "icomoon1/fonts/icomoon.svg"));
+
+*[class^="icon-icomoon1-"]:before, *[class*=" icon-icomoon1-"]:before {
+  font-family: "icon-icomoon1";
+
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+}
+
+.icon-icomoon1-heart-outlined:before { content: "\e90f"; }
+.icon-icomoon1-heart1:before { content: "\e910"; }
+.icon-icomoon1-menu:before { content: "\e911"; }
+.icon-icomoon1-star-full:before { content: "\e90c"; }
+.icon-icomoon1-search:before { content: "\e900"; }
+.icon-icomoon1-maximize:before { content: "\e90b"; }
+.icon-icomoon1-heart:before { content: "\e9da"; }
+.icon-icomoon1-folder-upload:before { content: "\e906"; }
+.icon-icomoon1-rotate:before { content: "\e90a"; }
+.icon-icomoon1-mail:before { content: "\e904"; }
+.icon-icomoon1-star-o:before { content: "\e90d"; }
+.icon-icomoon1-star:before { content: "\e90e"; }
+.icon-icomoon1-cloud-upload:before { content: "\e905"; }
+.icon-icomoon1-arrow_back_ios:before { content: "\e901"; }
+.icon-icomoon1-arrow_downward:before { content: "\e902"; }
+.icon-icomoon1-arrow_upward:before { content: "\e903"; }
+.icon-icomoon1-arrow_forward:before { content: "\e907"; }
+.icon-icomoon1-arrow_drop_down_circle:before { content: "\e908"; }
+.icon-icomoon1-play_arrow:before { content: "\e909"; }

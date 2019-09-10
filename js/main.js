@@ -30,4 +30,16 @@ $(function() {
     $('.hot-spot-block .photos-block .box').click(function() {
         $(this).addClass('active').siblings().removeClass('active');
     });
+
+    $('.play').click(function() {
+        $(this).parent().find('.video-popup').addClass('active');
+    });
+
+    $('.video-popup .close').click(function() {
+        console.log('video');
+        $(this).parent().removeClass('active');
+    });
+
+
+
 });
