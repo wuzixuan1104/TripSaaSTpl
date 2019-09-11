@@ -107,7 +107,7 @@ footer.footer-block .footer-top .box .social-link > a { display: inline-block; t
 footer.footer-block .footer-top .box .social-link > a i:before { font-size: 30px; }
 footer.footer-block .footer-top .box .social-link > a + * { margin-left: 20px; }
 footer.footer-block .footer-top .footer-content { display: flex; justify-content: space-around; width: 100%; height: 300px; text-align: left; }
-footer.footer-block .footer-top .branch-company { display: flex; width: 100%; margin: 20px 0; background-color: #2d2d2d; }
+footer.footer-block .footer-top .branch-company { display: flex; flex-wrap: wrap; width: 100%; margin: 20px 0; background-color: #2d2d2d; }
 footer.footer-block .footer-top .branch-company .box { width: 33%; }
 @media screen and (max-width: 929px) and (min-width: 0) { footer.footer-block .footer-top { padding: 0 15px; }
   footer.footer-block .footer-top .footer-content { display: block; height: auto; }
