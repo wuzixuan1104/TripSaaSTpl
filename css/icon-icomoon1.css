@@ -1,4 +1,4 @@
-@font-face { font-family: "icon-icomoon1"; src: url('../font/icomoon1/fonts/icomoon.eot?1568094756') format('embedded-opentype'), url('../font/icomoon1/fonts/icomoon.woff?1568094756') format('woff'), url('../font/icomoon1/fonts/icomoon.ttf?1568094756') format('truetype'), url('../font/icomoon1/fonts/icomoon.svg?1568094756') format('svg'); }
+@font-face { font-family: "icon-icomoon1"; src: url('../font/icomoon1/fonts/icomoon.eot?1571834476') format('embedded-opentype'), url('../font/icomoon1/fonts/icomoon.woff?1571834476') format('woff'), url('../font/icomoon1/fonts/icomoon.ttf?1571834476') format('truetype'), url('../font/icomoon1/fonts/icomoon.svg?1571834476') format('svg'); }
 *[class^="icon-icomoon1-"]:before, *[class*=" icon-icomoon1-"]:before { font-family: "icon-icomoon1"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; }
 
 .icon-icomoon1-heart-outlined:before { content: "\e90f"; }

@@ -11,7 +11,7 @@ html {
     width: 100%;
 
     margin: 0;
-    padding: 20px;
+    // padding: 20px;
     background-color: rgba(255, 255, 255, 1.00);
     color: rgba(90, 90, 90, 1.00);
     text-align: center;
@@ -38,14 +38,47 @@ html {
     padding: 0 20px;
     font-style: italic;
     z-index: 999;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.22);
 }
 
+$max-width: 1200px;
+.title-topic {
+    display: inline-block;
+    width: 100%;  
+    height: 155px;  
+    background: rgba(237, 243, 247, 1.00);
+    padding-top: 60px;
+
+    .content {
+        display: inline-block;
+        width: 100%;  
+        max-width: $max-width;
+
+        h1 {
+            margin: 0 auto;
+            text-align: left;
+            height: 100%;
+            line-height: 96px;
+            color: rgba(141, 205, 47, 1.00);
+            font-size: 25px;
+            letter-spacing: 2px;
+            span {
+                display: inline-block;
+                color: rgb(81, 87, 91);
+                font-size: 18px;
+                margin-right: 12px;
+            }
+        }
+        @include range-width(0, 1200px) {
+            max-width: 1000px;
+        }
+    }
+}
 main {
     display: inline-block;
     width: 100%;
     max-width: 1200px;
-    padding-top: 60px;
-
+    padding-top: 50px;
     h1 {
         display: inline-block;
         margin: 40px auto;

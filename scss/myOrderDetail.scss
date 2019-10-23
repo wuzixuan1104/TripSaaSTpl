@@ -61,6 +61,13 @@ $max-width: 1200px;
             line-height: 96px;
             color: rgba(141, 205, 47, 1.00);
             font-size: 25px;
+            letter-spacing: 2px;
+            span {
+                display: inline-block;
+                color: rgb(81, 87, 91);
+                font-size: 18px;
+                margin-right: 12px;
+            }
         }
         @include range-width(0, 1200px) {
             max-width: 1000px;
@@ -72,9 +79,19 @@ main {
     display: inline-block;
     width: 100%;
     max-width: $max-width;
-    padding-top: 60px;
+    padding-top: 40px;
     margin-bottom: 100px;
 
+    .back {
+        display: inline-block;
+        float: right;
+        text-decoration: none;
+        color: rgba(120, 175, 25, 1.00);
+
+        &:hover {
+            color: green;
+        }
+    }
     .order-detail-card {
         position: relative;
         display: inline-block;
@@ -105,7 +122,7 @@ main {
                     position: relative;
                     width: calc(100% - 400px);
                     background: rgba(124, 160, 183, 0.34);
-                    color: white;
+                    color: #7496a7;
                     &:after {
                         position: absolute;
                         content: '';
@@ -192,7 +209,78 @@ main {
                 border-right: 1px solid rgba(203, 219, 230, 1.00);
             }
             .card-right {
+                position: relative;
                 width: 400px;
+                height: 400px;
+                padding: 20px;
+                .where {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: left;
+                    float: left;
+                    margin-bottom: 30px;
+                    > * {
+                        display: inline-block;
+                    }
+                    .country {
+                        font-size: 30px;
+                        color: rgba(120, 175, 25, 1.00);
+                    }
+                    .days {
+                        font-size: 25px;
+                        color: #676767;
+                        margin-left: 10px;
+                        margin-top: 5px;
+                    }
+                }
+                .status {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: left;
+                    margin-bottom: 20px;
+                    border-bottom: 1px dashed rgba(203, 219, 230, 1.00);
+                    b {
+                        display: inline-block;
+                        margin-bottom: 20px;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        background-color: red;
+                        color: white;
+                    }
+                }
+                .note {
+                    display: block;
+                    width: 100%;
+
+                    table {
+                        width: 100%;
+                        color: rgb(117, 174, 108);
+                        border-spacing: 0;
+                        border-collapse: collapse;
+                        border-color: rgba(3, 200, 83, 1.00);
+
+                        td, th {
+                            border: 1px solid rgb(178, 224, 186);
+                            padding: 7px 9px 7px 25px;
+                        }
+
+                        td {
+                            text-align: left;
+                        }
+                    }
+                }
+                
+                .date {
+                    position: absolute;
+                    display: inline-block;
+                    width: 100%;
+                    right: -77px;
+                    bottom: 10px;
+                    font-style: italic;
+                    color: rgb(160, 160, 160);
+                    font-weight: lighter;
+                    letter-spacing: 2px;
+                }
             }
         }
         .room-detail {
@@ -214,7 +302,6 @@ main {
                     margin-bottom: 30px;
                 }
                 .date {
-                    display: inline-block;
                     line-height: 33px;
                     font-size: 15px;
                     float: right;
@@ -224,6 +311,107 @@ main {
                         line-height: 33px;
                         font-size: 17px;
                         margin-right: 5px;
+                    }
+                }
+                .note {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100px;
+                    margin-bottom: 20px;
+                    @include clearfix();
+                    > * {
+                        display: inline-block;
+                        float: left;
+                        height: 100%;
+                    }
+
+                    .note-box {
+                        width: calc(100% / 3 - 15px);
+                        height: 100%;
+                        box-shadow: 1px 1px 4px 1px rgb(225, 225, 225);
+                        + .note-box {
+                            margin-left: 20px;
+                        }
+                        @include clearfix();
+                        > * {
+                            display: inline-block;
+                            float: left;
+
+                            &.icon {
+                                height: 100%;
+                                width: 100px;
+                                background-color: rgba(120, 175, 25, 1.00);
+
+                                span {
+                                    display: inline-block;
+                                    width: calc(100% - 28px);
+                                    height: calc(100% - 28px);
+                                    border-radius: 50%;
+                                    background-color: white;
+                                    margin-top: 14px;
+                                    margin-left: 14px;
+                                    i {
+                                        display: inline-block;
+                                        height: 100px;
+                                        width: 100%;
+                                        line-height: 77px;
+                                        text-align: center;
+                                        font-size: 38px;
+                                    }
+                                }
+                            }
+                            &.content {
+                                height: 100%;
+                                width: calc(100% - 100px);
+                                line-height: 100px;
+                                text-align: center;
+                                font-size: 20px;
+                                font-weight: bold;
+                                letter-spacing: 2px;
+                            }
+                        }
+                        figure {
+                            position: relative;
+                            margin: 0;
+                            display: inline-block;
+                            width: 100%;
+                            height: 100px;
+                            overflow: hidden;
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+
+                            &:before {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                content: attr(data-title);
+                                width: 100%;
+                                height: 100%;
+                                line-height: 100px;
+
+                                background-color: rgba(0, 0, 0, 0.61);
+                                font-size: 18px;
+                                letter-spacing: 2px;
+                                color: white;
+                                text-align: center;
+                                @include opacity(1);
+
+                                @include transition(opacity .5s);
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                transform: scale(1.1);
+                                height: 300px;
+                                border: 7px solid rgb(95, 168, 60);
+                                border-radius: 3px;
+                                &:before {
+                                    @include opacity(0);
+                                }
+                            }
+                        }
+
                     }
                 }
                 table {
