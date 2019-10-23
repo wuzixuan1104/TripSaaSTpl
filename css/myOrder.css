@@ -1,0 +1,35 @@
+@charset "UTF-8";
+*, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
+
+html { position: relative; }
+html body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 20px; background-color: white; color: #5a5a5a; text-align: center; font-size: medium; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; }
+html body::-moz-selection { color: white; background-color: #78baff; }
+html body::selection { color: white; background-color: #78baff; }
+
+#header { position: fixed; top: 0; left: 0; display: inline-block; width: 100%; height: 60px; line-height: 60px; background-color: #78af19; color: white; text-align: left; font-size: 25px; padding: 0 20px; font-style: italic; z-index: 999; }
+
+.order-list { display: inline-block; width: 100%; max-width: 1200px; margin: 100px 0; border: 1px solid #e0e5e9; padding-bottom: 50px; *zoom: 1; }
+.order-list:after { display: table; content: ""; line-height: 0; clear: both; }
+.order-list[data-type="group"] .tab-content.group { display: inline-block; }
+.order-list[data-type="hotel"] .tab-content.hotel { display: inline-block; }
+.order-list[data-type="flight"] .tab-content.flight { display: inline-block; }
+.order-list .nav-tabs { display: inline-block; width: 100%; height: 50px; line-height: 50px; margin: 0; padding: 0; text-align: left; background: #eff2f3; border-bottom: 1px solid #e0e5e9; }
+.order-list .nav-tabs > * { display: inline-block; list-style: none; text-decoration: none; color: #96a8b3; padding: 0 20px; float: left; -moz-transition: background 0.1s ease-in; -o-transition: background 0.1s ease-in; -webkit-transition: background 0.1s ease-in; transition: background 0.1s ease-in; }
+.order-list .nav-tabs > *:hover { background: #95a8b4; color: white; }
+.order-list .nav-tabs > *.active { position: relative; color: #6da518; background: white; }
+.order-list .nav-tabs > *.active:before { position: absolute; top: -10; left: 0; content: ''; display: inline-block; width: 100%; height: 3px; background: #8dcd2f; }
+.order-list .nav-tabs > *.active:hover { background: white; color: #6da518; }
+.order-list .tab-content { display: none; width: 100%; max-width: 1200px; text-align: center; color: #737373; }
+.order-list .tab-content .myorder-list { display: inline-block; border-collapse: collapse; word-wrap: break-word; table-layout: fixed; text-align: left; padding: 25px; margin-top: 20px; }
+.order-list .tab-content .myorder-list tr { border-bottom: 1px solid #ececec; }
+.order-list .tab-content .myorder-list tr:first-child { border-bottom: none; }
+.order-list .tab-content .myorder-list th, .order-list .tab-content .myorder-list td { padding: 12px 10px; word-break: break-word; vertical-align: middle; }
+.order-list .tab-content .myorder-list th { color: #a1a1a1; font-weight: bold; }
+.order-list .tab-content .myorder-list td { letter-spacing: 2px; }
+.order-list .tab-content .myorder-list td i { display: inline-block; margin-right: 5px; font-size: 20px; line-height: 22px; }
+.order-list .tab-content .myorder-list td.title { font-weight: bold; color: #7491a2; }
+.order-list .tab-content .myorder-list td.status.confirm i { color: #ffc00a; }
+.order-list .tab-content .myorder-list td.status.unconfirm i { color: #b9b9b9; }
+.order-list .tab-content .myorder-list td.status.ungroup i { color: red; }
+.order-list .tab-content .myorder-list td > a { display: inline-block; padding: 7px 38px; text-decoration: none; color: #96a8b3; border: 1px solid #a1a1a1; text-transform: capitalize; border-radius: 3px; border: solid 1px #95a8b4; -moz-transition: background 0.3s ease-in; -o-transition: background 0.3s ease-in; -webkit-transition: background 0.3s ease-in; transition: background 0.3s ease-in; }
+.order-list .tab-content .myorder-list td > a:hover { color: white; border: 1px solid #8dcd2f; background: #8dcd2f; }
