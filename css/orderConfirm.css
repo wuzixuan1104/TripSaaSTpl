@@ -40,7 +40,7 @@ main.order-confirm .order-confirm-form > * { display: inline-block; width: 100%;
 main.order-confirm .order-confirm-form h1 { margin: 0 auto; text-align: left; }
 main.order-confirm .order-confirm-form .room-confirm { *zoom: 1; }
 main.order-confirm .order-confirm-form .room-confirm:after { display: table; content: ""; line-height: 0; clear: both; }
-main.order-confirm .order-confirm-form .room-confirm + .room-confirm { margin-top: 100px; border-top: 1px dashed #cbdbe4; padding-top: 50px; }
+main.order-confirm .order-confirm-form .room-confirm + .room-confirm { margin-top: 50px; border-top: 1px dashed #cbdbe4; padding-top: 50px; }
 main.order-confirm .order-confirm-form .room-confirm > * { display: inline-block; float: left; }
 main.order-confirm .order-confirm-form .room-confirm .left-box { width: calc(100% - 270px); padding-right: 130px; }
 main.order-confirm .order-confirm-form .room-confirm .left-box > * { display: inline-block; width: 100%; text-align: left; }
