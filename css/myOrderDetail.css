@@ -71,6 +71,8 @@ main .order-detail-card .room-detail .room-box .note .note-box figure { position
 main .order-detail-card .room-detail .room-box .note .note-box figure:before { position: absolute; top: 0; left: 0; content: attr(data-title); width: 100%; height: 100%; line-height: 100px; background-color: rgba(0, 0, 0, 0.61); font-size: 18px; letter-spacing: 2px; color: white; text-align: center; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s; -webkit-transition: opacity 0.5s; transition: opacity 0.5s; }
 main .order-detail-card .room-detail .room-box .note .note-box figure:hover { cursor: pointer; transform: scale(1.1); height: 300px; border: 7px solid #5fa83c; border-radius: 3px; }
 main .order-detail-card .room-detail .room-box .note .note-box figure:hover:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+main .order-detail-card .room-detail .room-box .remind { list-style: none; padding: 0; color: #fd153e; }
+main .order-detail-card .room-detail .room-box .remind li i { font-size: 20px; margin-right: 5px; }
 main .order-detail-card .room-detail .room-box table { width: 100%; color: #999898; margin-bottom: 11px; font: 14px 'Open Sans'; background-color: transparent; border-spacing: 0; border-collapse: collapse; border-color: gray; }
 main .order-detail-card .room-detail .room-box table td, main .order-detail-card .room-detail .room-box table th { border: 1px solid #ebebeb !important; padding: 15px 17px 14px 17px !important; }
 main .order-detail-card .room-detail .room-box table th { color: #79ad2a; }

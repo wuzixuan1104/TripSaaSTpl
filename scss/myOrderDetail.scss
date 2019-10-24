@@ -414,6 +414,18 @@ main {
 
                     }
                 }
+
+                .remind {
+                    list-style: none;
+                    padding: 0;
+                    color: rgb(253, 21, 62);
+                    li {
+                        i {
+                            font-size: 20px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
                 table {
                     width: 100%;
                     color: #999898;
