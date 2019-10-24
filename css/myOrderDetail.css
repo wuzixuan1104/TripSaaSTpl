@@ -33,9 +33,9 @@ main .order-detail-card .hotel-topic .card-left { width: calc(100% - 400px); *zo
 main .order-detail-card .hotel-topic .card-left:after { display: table; content: ""; line-height: 0; clear: both; }
 main .order-detail-card .hotel-topic .card-left > * { display: inline-block; float: left; }
 main .order-detail-card .hotel-topic .card-left figure { margin: 0; display: inline-block; width: 340px; height: 400px; overflow: hidden; background-size: cover; background-position: center center; background-repeat: no-repeat; }
-main .order-detail-card .hotel-topic .card-left .content { width: calc(100% - 340px); text-align: left; }
+main .order-detail-card .hotel-topic .card-left .content { width: calc(100% - 340px); text-align: left; overflow: hidden; }
 main .order-detail-card .hotel-topic .card-left .content h3 { padding: 20px; margin: 0 auto; }
-main .order-detail-card .hotel-topic .card-left .content p { padding: 20px; padding-top: 0px; color: #96a8b3; height: calc(400px - 66px - 52px); overflow: hidden; margin: 0 auto; }
+main .order-detail-card .hotel-topic .card-left .content p { display: -webkit-box; padding: 20px; padding-top: 0px; height: calc(400px - 66px - 55px); line-height: 23px; color: #96a8b3; overflow: hidden; margin: 0 auto; text-overflow: ellipsis; -webkit-line-clamp: 12; -webkit-box-orient: vertical; }
 main .order-detail-card .hotel-topic .card-left .content .star { margin-top: 10px; padding-right: 20px; height: 42px; line-height: 42px; border-top: 1px solid #cbdbe6; text-align: right; color: #fdbf2e; }
 main .order-detail-card .hotel-topic .card-left .content .star > i { display: inline-block; height: 42px; line-height: 42px; font-size: 20px; }
 main .order-detail-card .hotel-topic .card-right { position: relative; width: 400px; height: 400px; padding: 20px; }

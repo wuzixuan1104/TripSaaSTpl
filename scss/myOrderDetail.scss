@@ -177,17 +177,27 @@ main {
                 .content {
                     width: calc(100% - 340px);
                     text-align: left;
+                    overflow: hidden;
+                 
                     h3 {
                         padding: 20px;
                         margin: 0 auto;
                     }
                     p {
+                        display: -webkit-box;
                         padding: 20px;
                         padding-top: 0px;
+                        height: calc(400px - 66px - 55px);
+                        line-height: 23px;
+
                         color: rgba(150, 168, 179, 1.00);
-                        height: calc(400px - 66px - 52px);
+
                         overflow: hidden;
                         margin: 0 auto;
+
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 12;
+                        -webkit-box-orient: vertical;
                     }
                     .star {
                         margin-top: 10px;

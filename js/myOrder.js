@@ -12,4 +12,8 @@ $(function() {
         console.log($(this).closest('.order-list'));
         $(this).closest('.order-list').attr('data-type', $(this).data('title'));
     });
+
+    $('.person-box').click(function() {
+        $(this).toggleClass('active');
+    })
 });
