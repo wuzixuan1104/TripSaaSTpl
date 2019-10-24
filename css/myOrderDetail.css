@@ -45,10 +45,17 @@ main .order-detail-card .hotel-topic .card-right .where .country { font-size: 30
 main .order-detail-card .hotel-topic .card-right .where .days { font-size: 25px; color: #676767; margin-left: 10px; margin-top: 5px; }
 main .order-detail-card .hotel-topic .card-right .status { display: inline-block; width: 100%; text-align: left; margin-bottom: 20px; border-bottom: 1px dashed #cbdbe6; }
 main .order-detail-card .hotel-topic .card-right .status b { display: inline-block; margin-bottom: 20px; padding: 5px 10px; border-radius: 5px; background-color: red; color: white; }
+main .order-detail-card .hotel-topic .card-right .status b.confirm { background-color: #fdbb00; }
 main .order-detail-card .hotel-topic .card-right .note { display: block; width: 100%; }
 main .order-detail-card .hotel-topic .card-right .note table { width: 100%; color: #75ae6c; border-spacing: 0; border-collapse: collapse; border-color: #03c853; }
 main .order-detail-card .hotel-topic .card-right .note table td, main .order-detail-card .hotel-topic .card-right .note table th { border: 1px solid #b2e0ba; padding: 7px 9px 7px 25px; }
 main .order-detail-card .hotel-topic .card-right .note table td { text-align: left; }
+main .order-detail-card .hotel-topic .card-right .alert-unconfirm { display: inline-block; width: 100%; margin-top: 30px; }
+main .order-detail-card .hotel-topic .card-right .alert-unconfirm > * { display: inline-block; width: 100%; }
+main .order-detail-card .hotel-topic .card-right .alert-unconfirm span { text-align: left; font-size: 13px; margin-bottom: 10px; color: #989898; }
+main .order-detail-card .hotel-topic .card-right .alert-unconfirm span b { display: inline-block; margin: 0 5px; margin-top: -5px; color: #fc0d1b; font-size: 20px; }
+main .order-detail-card .hotel-topic .card-right .alert-unconfirm > a { padding: 10px 20px; background-color: #79ad2a; color: white; text-decoration: none; letter-spacing: 1px; border-radius: 3px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+main .order-detail-card .hotel-topic .card-right .alert-unconfirm > a:hover { background-color: #5c841f; }
 main .order-detail-card .hotel-topic .card-right .date { position: absolute; display: inline-block; width: 100%; right: -77px; bottom: 10px; font-style: italic; color: #a0a0a0; font-weight: lighter; letter-spacing: 2px; }
 main .order-detail-card .room-detail { margin-top: 50px; border: 1px solid #cbdbe6; padding: 30px 40px; }
 main .order-detail-card .room-detail .room-box { display: inline-block; width: 100%; text-align: left; }
