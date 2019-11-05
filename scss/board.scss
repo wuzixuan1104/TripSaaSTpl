@@ -1,0 +1,133 @@
+
+@import "Ginkgo";
+
+html {
+  position: relative;
+
+  body {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+
+    margin: 0;
+    // padding: 20px;
+    background-color: rgba(255, 255, 255, 1.00);
+    color: rgba(90, 90, 90, 1.00);
+    text-align: center;
+    font-size: medium;
+    font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+    
+    // 文字染色，背景色、文字色
+    @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
+  }
+}
+
+form.search {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(224, 229, 233, 1.00);
+    margin-bottom: 20px;
+    > * {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    ~ * {
+        display: block;
+    }
+    .info {
+        @include clearfix();
+
+        padding-left: 36px;
+        > a {
+            position: absolute;
+            left: -16px;
+            top: -12px;
+            float: none;
+            width: 44px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            margin-right: 8px;
+            border-right: 1px solid #dedede;
+            font-style: 18px;
+            display: inline;
+            text-decoration: none;
+
+            i {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                line-height: 44px;
+                color: rgba(121, 173, 42, 1.00);
+            }
+        }
+
+        > span {
+            width: 50%;
+            float: left;
+            text-align: left;
+            font-size: 15px;
+            color: rgb(123, 123, 123);
+            padding-left: 5px;
+
+            b {
+                color: rgba(253, 191, 47, 1.00);
+                margin: 0 5px;
+            }
+            + span {
+                text-align: right;
+            }
+            > a {
+                display: inline-block;
+                height: 100%;
+                text-decoration: none;
+                color: rgba(121, 173, 42, 1.00);
+
+                i {
+                    display: inline-block;
+                    height: 100%;
+                    font-size: 18px;
+                    line-height: 20px;
+                    margin-right: 3px;
+                }
+
+                &:hover {
+                    color: rgba(251, 190, 65, 1.00);
+                }
+            }
+        }
+    }
+    .conditions {
+        padding-top: 30px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: -16px;
+            top: 10px;
+            display: inline-block;
+            width: calc(100% + 16px * 2);
+            height: 1px;
+            background-color: gainsboro;
+        }
+       
+        .row {
+            display: inline-block;
+            width: 100%;
+            > * {
+                display: inline-block;
+                width: 100%;
+            }
+            b {
+                text-align: left;
+            }
+            input {
+            }
+        }
+    }
+}
+
+
+

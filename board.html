@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta http-equiv="Content-Language" content="zh-tw">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+
+        <title>留言板</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/myOrder.css">
+        <link rel="stylesheet" type="text/css" href="css/board.css">
+        
+        <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/myOrder.js"></script>
+    </head>
+    <body>
+        <header id="header">acer</header>
+        <div class="title-topic">
+            <div class="content">
+                <h1>留言板</h1>
+            </div>
+        </div>
+        <main>
+            <!-- <h1>我的訂單</h1> -->
+            <form class="search">
+                <div class="info show">
+                    <a href="#" class=""><i class="material-icons">search</i></a>
+                    <span>目前共有<b>0</b>筆。</span>
+                    <span><a href="#"><i class="material-icons">add</i>新增貼文 / 我要開團</a></span>
+                </div>
+                <div class="conditions">
+                    <label class="row">
+                        <b>狀態</b>
+                        <input type="text">
+                    </label>
+                    <label class="row">
+                        <b>時間</b>
+                        <input type="text">
+                    </label>
+                    <label class="row"></label>
+                    <div class="btns"></div>
+                </div>
+            </form>
+            <section class="order-list" data-type="group">
+                <div class="nav-tabs">
+                    <a href="#" class="active" data-title="group">跟團</a>
+                    <a href="#" data-title="hotel">飯店</a>
+                    <a href="#" data-title="flight">機票</a>
+                </div>
+                <div class="group tab-content">
+                    <table class="myorder-list">
+                        <tr>
+                            <th width="400">團名</th> 
+                            <th width="200">團長</th> 
+                            <th width="300">狀態</th> 
+                            <th width="300">建立日期</th> 
+                            <th width="150">操作</th> 
+                        </tr>
+                        <tr>
+                            <td class="title">吃吃喝喝玩樂團</td>
+                            <td>吳姿萱</td>
+                            <td class="status unconfirm"><i class="material-icons">check_circle_outline</i>確認中</td>
+                            <td>2019-10-23 03:34:00</td>
+                            <td><a href="orderDetail.html">詳細</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title">吃吃喝喝玩樂團V2</td>
+                            <td>吳姿萱</td>
+                            <td class="status confirm"><i class="material-icons">check_circle</i>已成團</td>
+                            <td>2019-10-23 03:34:00</td>
+                            <td><a href="#">詳細</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title">吃吃喝喝玩樂團</td>
+                            <td>吳姿萱</td>
+                            <td class="status ungroup"><i class="material-icons">close</i>未成團</td>
+                            <td>2019-10-23 03:34:00</td>
+                            <td><a href="#">詳細</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="hotel tab-content">
+                    <table class="myorder-list">
+                        <tr>
+                            <th width="400">團名</th> 
+                            <th width="200">團長</th> 
+                            <th width="300">狀態</th> 
+                            <th width="300">建立日期</th>
+                            <th width="150">操作</th> 
+                        </tr>
+                        <tr>
+                            <td class="title">凱薩飯店！！！</td>
+                            <td>吳姿萱</td>
+                            <td class="status unconfirm"><i class="material-icons">check_circle_outline</i>確認中</td>
+                            <td>2019-10-23 03:34:00</td>
+                            <td><a href="#">詳細</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title">吃吃喝喝玩樂團V2</td>
+                            <td>吳姿萱</td>
+                            <td class="status confirm"><i class="material-icons">check_circle</i>已成團</td>
+                            <td>2019-10-23 03:34:00</td>
+                            <td><a href="#">詳細</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="flight tab-content">
+                    <table class="myorder-list">
+                        <tr>
+                            <th width="400">團名</th> 
+                            <th width="200">團長</th> 
+                            <th width="300">狀態</th>
+                            <th width="300">建立日期</th> 
+                            <th width="150">操作</th> 
+                        </tr>
+                        <tr>
+                            <td class="title">飛去日本瞜～～</td>
+                            <td>吳姿萱</td>
+                            <td class="status unconfirm"><i class="material-icons">check_circle_outline</i>確認中</td>
+                            <td>2019-10-23 03:34:00</td>
+                            <td><a href="#">詳細</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title">飛去日本瞜～～</td>
+                            <td>吳姿萱</td>
+                            <td class="status confirm"><i class="material-icons">check_circle</i>已成團</td>
+                            <td>2019-10-23 03:34:00</td>
+                            <td><a href="#">詳細</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
