@@ -115,5 +115,5 @@ html body::selection { color: white; background-color: #78baff; }
 .body-board .send-box input:-ms-input-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
 .body-board .send-box input::-webkit-input-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
 .body-board .send-box a { width: 100px; height: 50px; line-height: 50px; margin-left: 15px; text-decoration: none; color: black; border-radius: 10px; font-size: 16px; background-color: #ffcd40; }
-.body-board .send-box .reply-to { position: fixed; display: none; width: 100%; height: 50px; line-height: 50px; color: white; background-color: rgba(0, 0, 0, 0.78); bottom: 80px; left: 0; text-align: left; padding-left: 193px; }
+.body-board .send-box .reply-to { position: fixed; display: none; width: 100%; height: 50px; line-height: 50px; color: white; background-color: rgba(0, 0, 0, 0.78); bottom: 80px; left: 0; text-align: left; padding-left: calc((100% - 1200px) / 2); }
 .body-board .send-box .reply-to.active { display: inline-block; }

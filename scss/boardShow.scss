@@ -538,7 +538,7 @@ $max-width: 1200px;
             bottom: 80px;
             left: 0;
             text-align: left;
-            padding-left: 193px;
+            padding-left: calc((100% - #{$max-width}) / 2);
         }
     }
 }
