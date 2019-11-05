@@ -177,17 +177,27 @@ main {
                 .content {
                     width: calc(100% - 340px);
                     text-align: left;
+                    overflow: hidden;
+                 
                     h3 {
                         padding: 20px;
                         margin: 0 auto;
                     }
                     p {
+                        display: -webkit-box;
                         padding: 20px;
                         padding-top: 0px;
+                        height: calc(400px - 66px - 55px);
+                        line-height: 23px;
+
                         color: rgba(150, 168, 179, 1.00);
-                        height: calc(400px - 66px - 52px);
+
                         overflow: hidden;
                         margin: 0 auto;
+
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 12;
+                        -webkit-box-orient: vertical;
                     }
                     .star {
                         margin-top: 10px;
@@ -246,6 +256,10 @@ main {
                         border-radius: 5px;
                         background-color: red;
                         color: white;
+
+                        &.confirm {
+                            background-color: rgb(253, 187, 0);
+                        }
                     }
                 }
                 .note {
@@ -269,7 +283,44 @@ main {
                         }
                     }
                 }
-                
+                    
+                .alert-unconfirm {
+                    display: inline-block;
+                    width: 100%;
+                    margin-top: 30px;
+                    > * {
+                        display: inline-block;
+                        width: 100%;
+                    }
+
+                    span {
+                        text-align: left;
+                        font-size: 13px;
+                        margin-bottom: 10px;
+                        color: rgb(152, 152, 152);
+                        b {
+                            display: inline-block;
+                            margin:0 5px;
+                            margin-top: -5px;
+                            color: rgba(252, 13, 27, 1.00);
+                            font-size: 20px;
+                        }
+                    }
+                    > a {
+                        padding: 10px 20px;
+                        background-color: rgba(121, 173, 42, 1.00);
+                        color: white;
+                        text-decoration: none;
+                        letter-spacing: 1px;
+                        border-radius: 3px;
+                        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+                        
+                        &:hover {
+                            background-color: rgb(92, 132, 31);
+                        }
+                    }
+                }
+
                 .date {
                     position: absolute;
                     display: inline-block;
@@ -412,6 +463,18 @@ main {
                             }
                         }
 
+                    }
+                }
+
+                .remind {
+                    list-style: none;
+                    padding: 0;
+                    color: rgb(253, 21, 62);
+                    li {
+                        i {
+                            font-size: 20px;
+                            margin-right: 5px;
+                        }
                     }
                 }
                 table {

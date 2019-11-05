@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta http-equiv="Content-Language" content="zh-tw">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+
+        <title>訂單確認頁</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/orderConfirm.css">
+        
+        <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/myOrder.js"></script>
+    </head>
+    <body>
+        <header id="header">acer</header>
+        <main class="order-confirm">
+            <div class="title-part">
+                <div class="header">
+                    <span>飯店</span>
+                    <span>明細</span>
+                </div>
+                <header class="hotel-topic">
+                    <div class="card-left">
+                        <figure style="background-image:url(http://dimg04.c-ctrip.com/images//fd/hotel/g6/M05/B1/3B/CggYtFczgMmAHvE3AAHRUIrbkQY022_R_550_412.jpg)"></figure>
+                        <div class="content">
+                            <h3>礁溪老爺大酒店</h3>
+                            <p>宜蘭礁溪老爺大酒店(HOTEL ROYAL CHIAO HSI SPA)位於宜蘭礁溪鄉宜蘭縣礁溪鄉大忠村五峰路。<br><br>酒店以雪山山脈為屏障，左邊為青翠的山巒，右邊則為得子口溪及礁溪高爾夫球場，視野開闊，白天可以俯瞰整個太平洋，夜間可以遠眺蘭陽平原的燦爛夜景。<br><br>酒店設計以「日式溫泉旅館」之型態為主，採用後現代的和風感覺來設計，其外形以有雄壯飛鳶意象而構成所謂「千鳥型」的建築型態。<br>酒店設計以「日式溫泉旅館」之型態為主，採用後現代的和風感覺來設計，其外形以有雄壯飛鳶意象而構成所謂「千鳥型」的建築型態。<br>酒店設計以「日式溫泉旅館」之型態為主，採用後現代的和風感覺來設計，其外形以有雄壯飛鳶意象而構成所謂「千鳥型」的建築型態。</p>
+                            <div class="star">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="empty material-icons">star_border</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <div class="where">
+                            <b class="country">台灣</b>
+                            <b class="days">5天</b>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <form class="order-confirm-form">
+                <div class="room-confirm">
+                    <div class="left-box">
+                        <section class="person-box active">
+                            <h3>成人 1 (吳姿萱) - 豪華雙人房<i class="material-icons">arrow_drop_down</i></h3>
+                            <div class="row-inner">
+                                <div class="row">
+                                    <div>
+                                        <label>員工編號<span>*</span></label>
+                                        <input type="text" name="name" value="A100001" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>員工姓名<span>*</span></label>
+                                        <input type="text" name="name" value="吳姿萱" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>應扣點數<span>*</span></label>
+                                        <input type="text" name="name" value="9,000" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <label>目前點數<span>*</span></label>
+                                        <input type="text" name="name" value="2000" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>應付金額<span>*</span></label>
+                                        <input type="text" name="name" value="2000" disabled="disabled">
+                                    </div>
+                                    <div class="error">
+                                        <label>使用點數<span>*</span></label>
+                                        <input class="hint" type="text" name="name" value="">
+                                        <p class="error-msg">請填寫使用點數！</p>
+                                    </div>
+                                </div>
+                                <div class="row" data-colomn="2">
+                                    <div>
+                                        <label>聯絡信箱</label>
+                                        <input class="hint" type="text" name="email" value="shari.wu@tripsaas.com">
+                                    </div>
+                                    <div>
+                                        <label>聯絡電話</label>
+                                        <input class="hint" type="text" name="phone" value="0919123123">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="person-box active">
+                            <h3>成人 2 (吳xx) - 豪華雙人房<i class="material-icons">arrow_drop_down</i></h3>
+                            <div class="row-inner">
+                                <div class="row">
+                                    <div>
+                                        <label>員工編號<span>*</span></label>
+                                        <input type="text" name="name" value="A100001" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>員工姓名<span>*</span></label>
+                                        <input type="text" name="name" value="吳姿萱" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>應扣點數<span>*</span></label>
+                                        <input type="text" name="name" value="9,000" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <label>目前點數<span>*</span></label>
+                                        <input type="text" name="name" value="2000" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>應付金額<span>*</span></label>
+                                        <input type="text" name="name" value="2000" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>使用點數<span>*</span></label>
+                                        <input class="hint" type="text" name="name" value="2000">
+                                    </div>
+                                </div>
+                                <div class="row" data-colomn="2">
+                                    <div>
+                                        <label>聯絡信箱</label>
+                                        <input class="hint" type="text" name="email" value="shari.wu@tripsaas.com">
+                                    </div>
+                                    <div>
+                                        <label>聯絡電話</label>
+                                        <input class="hint" type="text" name="phone" value="0919123123">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="right-box">
+                        <h3>訂房資訊</h3>
+                        <div class="pic"><img src="http://dimg04.c-ctrip.com/images//fd/hotel/g6/M05/B1/3B/CggYtFczgMmAHvE3AAHRUIrbkQY022_R_550_412.jpg"></div>
+                        <span class="room-title">豪華雙人房</span>
+                        <span class="info">
+                            <i class="material-icons">king_bed</i>
+                            <span>2 房</span>
+                        </span>
+                        <span class="info">
+                            <i class="material-icons">calendar_today</i>
+                            <span>2019-10-24 ~ 2019-10-30</span>
+                        </span>
+                        <div class="amount">
+                            <span class="title">總金額</span>
+                            <span class="total">15,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-confirm">
+                    <div class="left-box">
+                        <section class="person-box active">
+                            <h3>成人 3 (王xx) - 標準雙人房<i class="material-icons">arrow_drop_down</i></h3>
+                            <div class="row-inner">
+                                
+                                <div class="row">
+                                    <div>
+                                        <label>員工編號<span>*</span></label>
+                                        <input type="text" name="name" value="A100001" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>員工姓名<span>*</span></label>
+                                        <input type="text" name="name" value="吳姿萱" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>應扣點數<span>*</span></label>
+                                        <input type="text" name="name" value="9,000" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <label>目前點數<span>*</span></label>
+                                        <input type="text" name="name" value="2000" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>應付金額<span>*</span></label>
+                                        <input type="text" name="name" value="2000" disabled="disabled">
+                                    </div>
+                                    <div>
+                                        <label>使用點數<span>*</span></label>
+                                        <input class="hint" type="text" name="name" value="2000">
+                                    </div>
+                                </div>
+                                <div class="row" data-colomn="2">
+                                    <div>
+                                        <label>聯絡信箱</label>
+                                        <input class="hint" type="text" name="email" value="shari.wu@tripsaas.com">
+                                    </div>
+                                    <div>
+                                        <label>聯絡電話</label>
+                                        <input class="hint" type="text" name="phone" value="0919123123">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="right-box">
+                        <h3>訂房資訊</h3>
+                        <div class="pic"><img src="http://dimg04.c-ctrip.com/images//fd/hotel/g6/M05/B1/3B/CggYtFczgMmAHvE3AAHRUIrbkQY022_R_550_412.jpg"></div>
+                        <span class="room-title">標準雙人房</span>
+                        <span class="info">
+                            <i class="material-icons">king_bed</i>
+                            <span>2 房</span>
+                        </span>
+                        <span class="info">
+                            <i class="material-icons">calendar_today</i>
+                            <span>2019-10-24 ~ 2019-10-30</span>
+                        </span>
+                        <div class="amount">
+                            <span class="title">總金額</span>
+                            <span class="total">5,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="send">
+                    <button type="submit">送出訂單</button>
+                    <p>快點下訂喔！免得被搶走了...</p>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
