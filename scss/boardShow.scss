@@ -80,7 +80,7 @@ $max-width: 1200px;
     width: 100%;
     max-width: $max-width;
     background-color: white;
-    margin-top: -40px;
+    margin-top: -68px;
     @include box-shadow(1px 0px 6px rgb(214, 214, 214));
     border-radius: 3px;
     padding-bottom: 50px;
@@ -198,7 +198,6 @@ $max-width: 1200px;
                         margin-left: 38px;
                         border: 1px solid rgb(187, 187, 187);
                         border-style: dashed;
-                        // margin-left: calc(50% - 75px);
                         display: inline-block;
                     }
                 }
@@ -243,7 +242,7 @@ $max-width: 1200px;
 
                         .title {
                             display: inline-block;
-                            min-width: 80px;
+                            min-width: 85px;
                             color: rgba(158, 158, 158, 1.00);
                         }
 
@@ -283,7 +282,7 @@ $max-width: 1200px;
     width: 100%;
     max-width: $max-width;
     margin-top: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 
     > * {
         display: inline-block;
@@ -323,7 +322,30 @@ $max-width: 1200px;
             }
         }
     }
-
+    .join-box {
+        margin-top: 20px;
+        > * {
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+        }
+        h3 {
+            width: 100%;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(230, 234, 235, 1.00);
+        }
+        .join-detail {
+            span {
+                + span {
+                    &:before {
+                        content: '、';
+                        display: inline-block;
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
     .message-box {
         margin-top: 20px;
 
@@ -368,13 +390,15 @@ $max-width: 1200px;
                 .no {
                     font-style: italic;
                     color: rgb(177, 177, 177);
+                    font-size: 15px;
                 }
             }
             .bottom {
                 position: relative;
                 width: auto;
                 max-width: calc(100% - 200px);
-                margin-top: 10px;
+                margin-top: 2px;
+                margin-left: 40px;
                 p {
                     display: inline-block;
                     margin: 0 auto;
@@ -398,6 +422,46 @@ $max-width: 1200px;
                     right: -28px;
                     top: 0;
                     color: #717171;
+                }
+            }
+
+            .reply-box {
+                display: block;
+                margin-top: 10px;
+                margin-left: 40px;
+                .reply-box-content {
+                    display: block;
+                    .top {
+                        .avatar {
+                            height: 30px;
+                            width: 30px;
+                            i {
+                                font-size: 20px;
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                    .bottom {
+                        display: inline-block;
+                    }
+
+                    &.leader {
+                        .top {
+                            .avatar {
+                                background-color: rgba(231, 119, 105, 1.00);
+                            }
+                        }
+                        .bottom {
+                            p {
+                                background-color: rgb(255, 225, 222);
+                            }
+                        }
+                    }
+
+                    + .reply-box-content {
+                        margin-top: 10px;
+                    }
                 }
             }
 
@@ -428,13 +492,17 @@ $max-width: 1200px;
         width: 100%;
         height: 80px;
         background-color: rgb(83, 95, 105);
-
+        @include clearfix();
+        text-align: center;
+        > * {
+            display: inline-block;
+            margin-top: 15px;
+        }
         input {
             @include input(rgb(83, 95, 105), 50px);
             border-radius: 10px;
-            width: 100%;
+            width: calc(#{$max-width} - 120px);
             max-width: $max-width;
-            margin-top: 15px;
 
             font-size: 20px;
             padding: 0 20px;
@@ -444,6 +512,33 @@ $max-width: 1200px;
                 color: rgba(175, 175, 175, 1);
                 font-size: 16px;
             }
+        }
+        a {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            margin-left: 15px;
+            text-decoration: none;
+            color: black;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: rgba(255, 205, 64, 1.00);
+        }
+        .reply-to {
+            &.active {
+                display: inline-block;
+            }
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.78);
+            bottom: 80px;
+            left: 0;
+            text-align: left;
+            padding-left: 193px;
         }
     }
 }

@@ -14,7 +14,7 @@ html body::selection { color: white; background-color: #78baff; }
 .title-topic .content h1 span { display: inline-block; color: #51575b; font-size: 18px; margin-right: 12px; }
 @media screen and (max-width: 1199px) and (min-width: 0) { .title-topic .content { max-width: 1000px; } }
 
-.main-board { display: inline-block; width: 100%; max-width: 1200px; background-color: white; margin-top: -40px; -moz-box-shadow: 1px 0px 6px #d6d6d6; -webkit-box-shadow: 1px 0px 6px #d6d6d6; box-shadow: 1px 0px 6px #d6d6d6; border-radius: 3px; padding-bottom: 50px; }
+.main-board { display: inline-block; width: 100%; max-width: 1200px; background-color: white; margin-top: -68px; -moz-box-shadow: 1px 0px 6px #d6d6d6; -webkit-box-shadow: 1px 0px 6px #d6d6d6; box-shadow: 1px 0px 6px #d6d6d6; border-radius: 3px; padding-bottom: 50px; }
 .main-board > * { position: relative; display: inline-block; width: 100%; }
 .main-board .control-panel { padding: 10px 20px; *zoom: 1; }
 .main-board .control-panel:after { display: table; content: ""; line-height: 0; clear: both; }
@@ -46,13 +46,13 @@ html body::selection { color: white; background-color: #78baff; }
 .main-board .calendor-info .content .row-col2 > * { float: left; width: 50%; }
 .main-board .calendor-info .content .row-col2 .row-detail .item { display: block; padding-right: 50px; }
 .main-board .calendor-info .content .row-col2 .row-detail .item + .item { display: block; margin-top: 10px; }
-.main-board .calendor-info .content .row-col2 .row-detail .item .title { display: inline-block; min-width: 80px; color: #9e9e9e; }
+.main-board .calendor-info .content .row-col2 .row-detail .item .title { display: inline-block; min-width: 85px; color: #9e9e9e; }
 .main-board .calendor-info .content .row-col2 .row-detail .item .small { color: #adadad; margin-left: 5px; }
 .main-board .memo { padding: 50px; background: #f1f1f1; }
 .main-board .memo > * { display: inline-block; width: 100%; text-align: left; }
 .main-board .memo .poster .avatar { width: 50px; height: 50px; background-color: gray; border-radius: 50%; overflow: hidden; }
 
-.body-board { display: inline-block; width: 100%; max-width: 1200px; margin-top: 20px; margin-bottom: 150px; }
+.body-board { display: inline-block; width: 100%; max-width: 1200px; margin-top: 20px; margin-bottom: 200px; }
 .body-board > * { display: inline-block; width: 100%; }
 .body-board .header-topic { text-align: left; padding: 16px 50px; background-color: #e6eaeb; border-radius: 3px; }
 .body-board .header-topic > * { display: inline-block; float: left; }
@@ -60,6 +60,10 @@ html body::selection { color: white; background-color: #78baff; }
 .body-board .header-topic .avatar i { height: 35px; line-height: 35px; color: white; }
 .body-board .header-topic .name { height: 35px; line-height: 35px; margin-left: 10px; }
 .body-board .header-topic .name .small { color: #a2a2a2; margin-left: 5px; }
+.body-board .join-box { margin-top: 20px; }
+.body-board .join-box > * { display: inline-block; width: 100%; text-align: left; }
+.body-board .join-box h3 { width: 100%; padding-bottom: 5px; border-bottom: 1px solid #e6eaeb; }
+.body-board .join-box .join-detail span + span:before { content: '、'; display: inline-block; margin: 0 5px; }
 .body-board .message-box { margin-top: 20px; }
 .body-board .message-box > * { display: inline-block; width: 100%; text-align: left; }
 .body-board .message-box h3 { width: 100%; padding-bottom: 5px; border-bottom: 1px solid #e6eaeb; }
@@ -68,16 +72,26 @@ html body::selection { color: white; background-color: #78baff; }
 .body-board .message-box .msg-box-content .top .avatar { display: inline-block; width: 35px; height: 35px; text-align: center; background-color: #348bb1; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
 .body-board .message-box .msg-box-content .top .avatar i { color: white; font-size: 25px; height: 35px; line-height: 35px; }
 .body-board .message-box .msg-box-content .top .name { margin: 0 5px; }
-.body-board .message-box .msg-box-content .top .no { font-style: italic; color: #b1b1b1; }
-.body-board .message-box .msg-box-content .bottom { position: relative; width: auto; max-width: calc(100% - 200px); margin-top: 10px; }
+.body-board .message-box .msg-box-content .top .no { font-style: italic; color: #b1b1b1; font-size: 15px; }
+.body-board .message-box .msg-box-content .bottom { position: relative; width: auto; max-width: calc(100% - 200px); margin-top: 2px; margin-left: 40px; }
 .body-board .message-box .msg-box-content .bottom p { display: inline-block; margin: 0 auto; background-color: #d7ecf5; padding: 15px 20px; border-radius: 10px; font-size: 15px; line-height: 25px; }
 .body-board .message-box .msg-box-content .bottom time { position: absolute; bottom: 3px; right: -44px; font-size: 13px; color: #aba8a8; letter-spacing: 1px; }
 .body-board .message-box .msg-box-content .bottom .reply { position: absolute; right: -28px; top: 0; color: #717171; }
+.body-board .message-box .msg-box-content .reply-box { display: block; margin-top: 10px; margin-left: 40px; }
+.body-board .message-box .msg-box-content .reply-box .reply-box-content { display: block; }
+.body-board .message-box .msg-box-content .reply-box .reply-box-content .top .avatar { height: 30px; width: 30px; }
+.body-board .message-box .msg-box-content .reply-box .reply-box-content .top .avatar i { font-size: 20px; height: 30px; line-height: 30px; }
+.body-board .message-box .msg-box-content .reply-box .reply-box-content .bottom { display: inline-block; }
+.body-board .message-box .msg-box-content .reply-box .reply-box-content.leader .top .avatar { background-color: #e77769; }
+.body-board .message-box .msg-box-content .reply-box .reply-box-content.leader .bottom p { background-color: #ffe1de; }
+.body-board .message-box .msg-box-content .reply-box .reply-box-content + .reply-box-content { margin-top: 10px; }
 .body-board .message-box .msg-box-content.leader .top .avatar { background-color: #e77769; }
 .body-board .message-box .msg-box-content.leader .bottom p { background-color: #ffe1de; }
 .body-board .message-box .msg-box-content + .msg-box-content { margin-top: 20px; }
-.body-board .send-box { position: fixed; bottom: 0; left: 0; display: inline-block; width: 100%; height: 80px; background-color: #535f69; }
-.body-board .send-box input { height: 50px; line-height: 47px; color: #787878; font-size: 25px; padding: 0 8px; border: 1px solid #c8c8c8; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-transition: box-shadow 0.3s, border-color 0.3s; -o-transition: box-shadow 0.3s, border-color 0.3s; -webkit-transition: box-shadow 0.3s, border-color 0.3s; transition: box-shadow 0.3s, border-color 0.3s; border-radius: 10px; width: 100%; max-width: 1200px; margin-top: 15px; font-size: 20px; padding: 0 20px; border: 1px solid #535f69; }
+.body-board .send-box { position: fixed; bottom: 0; left: 0; display: inline-block; width: 100%; height: 80px; background-color: #535f69; *zoom: 1; text-align: center; }
+.body-board .send-box:after { display: table; content: ""; line-height: 0; clear: both; }
+.body-board .send-box > * { display: inline-block; margin-top: 15px; }
+.body-board .send-box input { height: 50px; line-height: 47px; color: #787878; font-size: 25px; padding: 0 8px; border: 1px solid #c8c8c8; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-transition: box-shadow 0.3s, border-color 0.3s; -o-transition: box-shadow 0.3s, border-color 0.3s; -webkit-transition: box-shadow 0.3s, border-color 0.3s; transition: box-shadow 0.3s, border-color 0.3s; border-radius: 10px; width: calc(1200px - 120px); max-width: 1200px; font-size: 20px; padding: 0 20px; border: 1px solid #535f69; }
 .body-board .send-box input:-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
 .body-board .send-box input::-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
 .body-board .send-box input:-ms-input-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
@@ -100,3 +114,6 @@ html body::selection { color: white; background-color: #78baff; }
 .body-board .send-box input::-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
 .body-board .send-box input:-ms-input-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
 .body-board .send-box input::-webkit-input-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
+.body-board .send-box a { width: 100px; height: 50px; line-height: 50px; margin-left: 15px; text-decoration: none; color: black; border-radius: 10px; font-size: 16px; background-color: #ffcd40; }
+.body-board .send-box .reply-to { position: fixed; display: none; width: 100%; height: 50px; line-height: 50px; color: white; background-color: rgba(0, 0, 0, 0.78); bottom: 80px; left: 0; text-align: left; padding-left: 193px; }
+.body-board .send-box .reply-to.active { display: inline-block; }
