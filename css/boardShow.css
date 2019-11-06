@@ -95,29 +95,44 @@ html body::selection { color: white; background-color: #78baff; }
 .body-board .send-box > * { display: inline-block; width: 100%; }
 .body-board .send-box .input-box { position: relative; height: 100%; background-color: #535f69; z-index: 2; }
 .body-board .send-box .input-box > * { display: inline-block; margin-top: 15px; }
-.body-board .send-box .input-box input { height: 50px; line-height: 47px; color: #787878; font-size: 25px; padding: 0 8px; border: 1px solid #c8c8c8; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-transition: box-shadow 0.3s, border-color 0.3s; -o-transition: box-shadow 0.3s, border-color 0.3s; -webkit-transition: box-shadow 0.3s, border-color 0.3s; transition: box-shadow 0.3s, border-color 0.3s; border-radius: 10px; width: calc(1200px - 120px); max-width: 1200px; font-size: 20px; padding: 0 20px; border: 1px solid #535f69; z-index: 2; }
-.body-board .send-box .input-box input:-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
-.body-board .send-box .input-box input::-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
-.body-board .send-box .input-box input:-ms-input-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
-.body-board .send-box .input-box input::-webkit-input-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
-.body-board .send-box .input-box input:focus { outline: 0; border: 1px solid #535f69; -moz-box-shadow: 0 0 8px rgba(83, 95, 105, 0.6); -webkit-box-shadow: 0 0 8px rgba(83, 95, 105, 0.6); box-shadow: 0 0 8px rgba(83, 95, 105, 0.6); }
-.body-board .send-box .input-box input[readonly] { cursor: not-allowed; background-color: #fafafa; border: 1px solid #e1e1e1; }
-.body-board .send-box .input-box input[readonly]:-moz-placeholder { color: #c8c8c8; }
-.body-board .send-box .input-box input[readonly]::-moz-placeholder { color: #c8c8c8; }
-.body-board .send-box .input-box input[readonly]:-ms-input-placeholder { color: #c8c8c8; }
-.body-board .send-box .input-box input[readonly]::-webkit-input-placeholder { color: #c8c8c8; }
-.body-board .send-box .input-box input[readonly]:focus { border: 1px solid #e1e1e1; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
-.body-board .send-box .input-box input[type="file"] { font-size: 16.66667px; padding: 6px; line-height: 0; width: auto; }
-.body-board .send-box .input-box input[type="file"]::-webkit-file-upload-button { display: inline-block; width: auto; height: 36px; line-height: 36px; font-size: 18px; padding-top: 0; padding-bottom: 0; border: 0; cursor: pointer; background-color: #458bf4; color: white; -moz-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.15), inset -1px -1px 1px rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.15), inset -1px -1px 1px rgba(0, 0, 0, 0.15); box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.15), inset -1px -1px 1px rgba(0, 0, 0, 0.15); -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-transition: box-shadow 0.1s; -o-transition: box-shadow 0.1s; -webkit-transition: box-shadow 0.1s; transition: box-shadow 0.1s; }
-.body-board .send-box .input-box input[type="file"]::-webkit-file-upload-button:hover { -moz-box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 2px rgba(255, 255, 255, 0.25); -webkit-box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 2px rgba(255, 255, 255, 0.25); box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 2px rgba(255, 255, 255, 0.25); text-shadow: 0 0 1px rgba(0, 0, 0, 0.25); }
-.body-board .send-box .input-box input[type="file"]::-webkit-file-upload-button:active { -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); }
-.body-board .send-box .input-box input[type="file"]::-webkit-file-upload-button:focus { outline: 0; }
-.body-board .send-box .input-box input[type="file"]::-webkit-file-upload-button[disabled] { cursor: not-allowed; text-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; background-color: #8db8f8; color: #5d5d5d; }
-.body-board .send-box .input-box input[type='date']::-webkit-datetime-edit { font-size: 25px; }
-.body-board .send-box .input-box input:-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
-.body-board .send-box .input-box input::-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
-.body-board .send-box .input-box input:-ms-input-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
-.body-board .send-box .input-box input::-webkit-input-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
-.body-board .send-box .input-box a { width: 100px; height: 50px; line-height: 50px; margin-left: 15px; text-decoration: none; color: black; border-radius: 10px; font-size: 16px; background-color: #ffcd40; }
+.body-board .send-box .input-box .pop-up { position: fixed; display: inline-block; width: 100%; height: 100%; top: -100%; left: 0; background-color: rgba(123, 123, 123, 0.46); z-index: 10; opacity: 0; -moz-transition: top 0.5s opacity; -o-transition: top 0.5s opacity; -webkit-transition: top 0.5s opacity; transition: top 0.5s opacity; }
+.body-board .send-box .input-box .pop-up .wanted-message-block { display: inline-block; width: 440px; background-color: #fdf8ee; margin-top: 155px; box-shadow: 1px 1px 7px #b3b3b3; border-radius: 10px; padding: 28px; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .mail { display: inline-block; width: 70px; height: 70px; line-height: 70px; border-radius: 50%; background-color: white; margin-bottom: 20px; box-shadow: 1px 1px 4px #c1c1c1; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .mail i { display: inline-block; line-height: 70px; font-size: 40px; color: #79ad2a; }
+.body-board .send-box .input-box .pop-up .wanted-message-block b { display: block; text-align: left; font-size: 17px; font-weight: normal; padding: 0 30px; margin-top: 10px; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .mail-title { text-align: center; margin-bottom: 10px; color: #7aac35; font-weight: bold; font-size: 18px; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .control-btn { display: inline-block; width: 100%; margin-top: 40px; *zoom: 1; border: 1px solid #85c523; font-size: 17px; border-radius: 3px; overflow: hidden; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .control-btn:after { display: table; content: ""; line-height: 0; clear: both; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .control-btn > * { display: inline-block; float: left; width: 50%; height: 50px; line-height: 50px; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .control-btn label.mail-cancel { background-color: white; color: #87c334; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .control-btn label.mail-cancel:hover { cursor: pointer; }
+.body-board .send-box .input-box .pop-up .wanted-message-block .control-btn a.mail-send { text-decoration: none; color: white; background-color: #87c334; }
+.body-board .send-box .input-box input[type="checkbox"] { display: none; }
+.body-board .send-box .input-box input[type="text"] { height: 50px; line-height: 47px; color: #787878; font-size: 25px; padding: 0 8px; border: 1px solid #c8c8c8; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-transition: box-shadow 0.3s, border-color 0.3s; -o-transition: box-shadow 0.3s, border-color 0.3s; -webkit-transition: box-shadow 0.3s, border-color 0.3s; transition: box-shadow 0.3s, border-color 0.3s; border-radius: 10px; width: calc(1200px - 120px); max-width: 1200px; font-size: 20px; padding: 0 20px; border: 1px solid #535f69; z-index: 2; }
+.body-board .send-box .input-box input[type="text"]:-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
+.body-board .send-box .input-box input[type="text"]::-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
+.body-board .send-box .input-box input[type="text"]:-ms-input-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
+.body-board .send-box .input-box input[type="text"]::-webkit-input-placeholder { font-weight: normal; color: #afafaf; font-size: 23.75px; }
+.body-board .send-box .input-box input[type="text"]:focus { outline: 0; border: 1px solid #535f69; -moz-box-shadow: 0 0 8px rgba(83, 95, 105, 0.6); -webkit-box-shadow: 0 0 8px rgba(83, 95, 105, 0.6); box-shadow: 0 0 8px rgba(83, 95, 105, 0.6); }
+.body-board .send-box .input-box input[type="text"][readonly] { cursor: not-allowed; background-color: #fafafa; border: 1px solid #e1e1e1; }
+.body-board .send-box .input-box input[type="text"][readonly]:-moz-placeholder { color: #c8c8c8; }
+.body-board .send-box .input-box input[type="text"][readonly]::-moz-placeholder { color: #c8c8c8; }
+.body-board .send-box .input-box input[type="text"][readonly]:-ms-input-placeholder { color: #c8c8c8; }
+.body-board .send-box .input-box input[type="text"][readonly]::-webkit-input-placeholder { color: #c8c8c8; }
+.body-board .send-box .input-box input[type="text"][readonly]:focus { border: 1px solid #e1e1e1; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+.body-board .send-box .input-box input[type="text"][type="file"] { font-size: 16.66667px; padding: 6px; line-height: 0; width: auto; }
+.body-board .send-box .input-box input[type="text"][type="file"]::-webkit-file-upload-button { display: inline-block; width: auto; height: 36px; line-height: 36px; font-size: 18px; padding-top: 0; padding-bottom: 0; border: 0; cursor: pointer; background-color: #458bf4; color: white; -moz-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.15), inset -1px -1px 1px rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.15), inset -1px -1px 1px rgba(0, 0, 0, 0.15); box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.15), inset -1px -1px 1px rgba(0, 0, 0, 0.15); -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-transition: box-shadow 0.1s; -o-transition: box-shadow 0.1s; -webkit-transition: box-shadow 0.1s; transition: box-shadow 0.1s; }
+.body-board .send-box .input-box input[type="text"][type="file"]::-webkit-file-upload-button:hover { -moz-box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 2px rgba(255, 255, 255, 0.25); -webkit-box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 2px rgba(255, 255, 255, 0.25); box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 2px rgba(255, 255, 255, 0.25); text-shadow: 0 0 1px rgba(0, 0, 0, 0.25); }
+.body-board .send-box .input-box input[type="text"][type="file"]::-webkit-file-upload-button:active { -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); }
+.body-board .send-box .input-box input[type="text"][type="file"]::-webkit-file-upload-button:focus { outline: 0; }
+.body-board .send-box .input-box input[type="text"][type="file"]::-webkit-file-upload-button[disabled] { cursor: not-allowed; text-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; background-color: #8db8f8; color: #5d5d5d; }
+.body-board .send-box .input-box input[type="text"][type='date']::-webkit-datetime-edit { font-size: 25px; }
+.body-board .send-box .input-box input[type="text"]:-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
+.body-board .send-box .input-box input[type="text"]::-moz-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
+.body-board .send-box .input-box input[type="text"]:-ms-input-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
+.body-board .send-box .input-box input[type="text"]::-webkit-input-placeholder { font-weight: normal; color: #afafaf; font-size: 16px; }
+.body-board .send-box .input-box .btn-i-want { width: 100px; height: 50px; line-height: 50px; margin-left: 15px; color: black; border-radius: 10px; font-size: 16px; background-color: #ffcd40; }
+.body-board .send-box .input-box .btn-i-want:hover { cursor: pointer; }
+.body-board .send-box .input-box #chb-wanted:checked ~ .pop-up { top: 0; opacity: 1; }
 .body-board .send-box .reply-to { position: fixed; display: inline-block; width: 100%; height: 50px; line-height: 50px; color: white; background-color: rgba(0, 0, 0, 0.78); bottom: -50px; left: 0; text-align: left; font-size: 15px; z-index: 1; padding-left: calc((100% - 1200px) / 2); -moz-transition: bottom 0.3s; -o-transition: bottom 0.3s; -webkit-transition: bottom 0.3s; transition: bottom 0.3s; }
 .body-board .send-box .reply-to.active { bottom: 80px; }

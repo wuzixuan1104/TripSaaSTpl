@@ -23,8 +23,8 @@
                 <header class="control-panel">
                     <time>最近編輯時間：2019-11-05 12:00:00</time>
                     <span>
-                        <a href="#"><i class="material-icons">create</i></a>
-                        <a href="#"><i class="material-icons">delete_forever</i></a>
+                        <a href="#" title="編輯"><i class="material-icons">create</i></a>
+                        <a href="#" title="取消"><i class="material-icons">delete_forever</i></a>
                     </span>
                 </header>
                 <div class="calendor-info">
@@ -176,8 +176,22 @@
                 </div>
                 <div class="send-box">
                     <div class="input-box">
-                        <input type="text" placeholder="想要報名請留下訊息跟團長說...">
-                        <a href="#">我要報名</a>
+                        <input id="chb-wanted" type="checkbox">
+                        <div class="pop-up">
+                            <div class="wanted-message-block">
+                                <span class="mail"><i class="material-icons">mail_outline</i></span>
+                                <b class="mail-title">親愛的吳姿萱您好</b>
+                                <b>即將通知團長您想要報名此團，團長確認後將會寄發報名成功信給您。</b>
+                                <div class="control-btn">
+                                    <label class="mail-cancel" for="chb-wanted">取消</label>
+                                    <a class="mail-send" href="#">確定</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="text" placeholder="輸入訊息...">
+                        <label class="btn-i-want" for="chb-wanted">我要報名</label>
+
                     </div>
                     <label class="reply-to">正在回覆<span class="name">吳姿萱 (團長)</span>的訊息...</label>
                 </div>
