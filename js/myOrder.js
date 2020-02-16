@@ -16,4 +16,18 @@ $(function() {
     $('.person-box > h3').click(function() {
         $(this).parent().toggleClass('active');
     })
+
+    var anchor = $(location).attr('hash');
+    console.log(anchor);
+
+    $('.process-list > a').each(function() {
+      if ($(this).attr('href') == anchor)
+        $(this).addClass('active').siblings().removeClass('active');
+
+      $(this).click(function() {
+        $(this).addClass('active').siblings().removeClass('active');
+      })
+    });
+
+
 });

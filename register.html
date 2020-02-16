@@ -14,27 +14,29 @@
     </head>
     <body>
         <main class="page-content">
+
             <div class="register-content page-main-content">
+
                 <aside class="process-list">
-                    <a href="#" class="active">
+                    <a href="#content-s-1" class="active">
                         <p class="step-icon">
                             <span>01</span>
                         </p>
                         <span class="step-text">開始註冊</span>
                     </a>
-                    <a href="#">
+                    <a href="#content-s-2" class="">
                         <p class="step-icon">
                             <span>02</span>
                         </p>
                         <span class="step-text">驗證身份</span>
                     </a>
-                    <a href="#">
+                    <a href="#content-s-3">
                         <p class="step-icon">
                             <span>03</span>
                         </p>
                         <span class="step-text">輸入註冊資料</span>
                     </a>
-                    <a href="#">
+                    <a href="#content-s-4">
                         <p class="step-icon">
                             <span>04</span>
                         </p>
@@ -42,7 +44,7 @@
                     </a>
                 </aside>
                 <div class="process-content">
-                    <div id="content-s-0" class="process-content-body">
+                    <div id="content-s-1" class="process-content-body">
                         <h3 class="title">開始註冊</h3>
                         <section class="body">
                             <div class="avatar-block">
@@ -50,8 +52,86 @@
                             </div>
                             <p class="next-text">請點選下一步，開始註冊流程！</p>
                         </section>
-                        <a href="#" class="next-step">下一步</a>
-                    <div>
+                        <a href="#content-s-2" class="next-step-custom">下一步</a>
+                    </div>
+                    <div id="content-s-2" class="process-content-body">
+                        <h3 class="title">驗證身份</h3>
+                        <section class="body">
+                            <span class="error-txt active"><i class="material-icons">error</i>工號無法註冊</span>
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="must">員工編號</label>
+                                    <input type="text" placeholder="請輸入員工編號">
+                                    <span class="error-txt">格式不正確</span>
+                                </div>
+                                <div class="row error">
+                                    <label class="must">身分證號 (後4碼)</label>
+                                    <input type="text" placeholder="請輸入身分證號後4碼">
+                                    <span class="error-txt">格式不正確</span>
+                                </div>
+                            </div>
+                            <div class="loading">身份核對中...</div>
+                        </section>
+                        <section class="footer">
+                            <a href="#content-s-3" class="next-step">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </a>
+                        </section>
+                    </div>
+                    <div id="content-s-2-2" class="process-content-body">
+                        <h3 class="title">驗證身份</h3>
+                        <section class="body">
+                            <div class="error-mode">
+                                <span><i class="material-icons">close</i></span>
+                                <h4>員工編號無法註冊</h4>
+                            </div>
+
+                        </section>
+                        <section class="footer">
+                            <a href="#content-s-3" class="next-step">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </a>
+                        </section>
+                    </div>
+                    <div id="content-s-3" class="process-content-body">
+                        <h3 class="title">輸入註冊資料</h3>
+                        <section class="body">
+                            <span class="error-txt"><i class="material-icons">error</i>無法註冊！找不到工號</span>
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="must">帳號</label>
+                                    <input type="text" placeholder="請輸入帳號">
+                                </div>
+                                <div class="row">
+                                    <label>密碼</label>
+                                    <input type="password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="row">
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        <span></span>請勾選同意福委條款
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="loading active">送出註冊資料中...</div>
+                        </section>
+                        <section class="footer">
+                            <a href="#content-s-4" class="next-step">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </a>
+                        </section>
+                    </div>
+                    <div id="content-s-4" class="process-content-body">
+                        <h3 class="title">帳號註冊完成</h3>
+                        <section class="body">
+                            <div class="success-mode">
+                                <span><i class="material-icons">check</i></span>
+                                <h4>帳號已啟用成功！</h4>
+                                <small class="loading-to">請稍候，正在幫您導向登入頁...</small>
+                            </div>
+                        </section>
+                        
+                    </div>
                 </div>
                 
             </div>
