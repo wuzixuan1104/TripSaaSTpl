@@ -17,6 +17,21 @@ $(function() {
         $(this).parent().toggleClass('active');
     })
 
+
+    var preName = '';
+    $('.reply').click(function() {
+        
+        var name = $(this).closest('section').find('.name').first().text();
+        if (name != preName) {
+            preName = name;
+            $('.reply-to').find('.name').text(name);
+            $('.reply-to').addClass('active');
+        } else {
+            $('.reply-to').removeClass('active');
+            preName = '';
+        }
+    });
+
     var anchor = $(location).attr('hash');
     console.log(anchor);
 
@@ -28,6 +43,4 @@ $(function() {
         $(this).addClass('active').siblings().removeClass('active');
       })
     });
-
-
 });

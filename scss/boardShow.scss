@@ -250,31 +250,29 @@ $max-width: 1200px;
                             color: #adadad;
                             margin-left: 5px;
                         }
+
+                        .status {
+                            display: inline-block;
+                            padding: 5px 10px;
+                            background-color: rgb(156, 156, 156);
+                            color: white;
+                            border-radius: 5px;
+                            font-size: 14px;
+                            margin-top: 3px;
+                            &.open {
+                                background-color: rgb(124, 197, 23);
+                            }
+                            &.cancel {
+                                background-color: rgb(228, 57, 57);
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
-    .memo {
-        padding: 50px;
-        background: rgb(241, 241, 241);
-        > * {
-            display: inline-block;
-            width: 100%;
-            text-align: left;
-        }
-        .poster {
-            .avatar {
-                width: 50px;
-                height: 50px;
-                background-color: gray;
-                border-radius: 50%;
-                overflow: hidden;
-            }
-        }
-        
-    }
+
 }
 
 .body-board {
@@ -290,7 +288,7 @@ $max-width: 1200px;
     }
     .header-topic {
         text-align: left;
-        padding: 16px 50px;
+        padding: 16px 20px;
         background-color: rgba(230, 234, 235, 1.00);
         border-radius: 3px;
 
@@ -390,7 +388,7 @@ $max-width: 1200px;
                 .no {
                     font-style: italic;
                     color: rgb(177, 177, 177);
-                    font-size: 15px;
+                    font-size: 13px;
                 }
             }
             .bottom {
@@ -419,9 +417,15 @@ $max-width: 1200px;
 
                 .reply {
                     position: absolute;
-                    right: -28px;
+                    right: -25px;
                     top: 0;
                     color: #717171;
+                    i {
+                        font-size: 20px;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -491,54 +495,176 @@ $max-width: 1200px;
         display: inline-block;
         width: 100%;
         height: 80px;
-        background-color: rgb(83, 95, 105);
+        // background-color: rgb(83, 95, 105);
         @include clearfix();
         text-align: center;
+        z-index: 2;
+
         > * {
             display: inline-block;
-            margin-top: 15px;
+            width: 100%;
         }
-        input {
-            @include input(rgb(83, 95, 105), 50px);
-            border-radius: 10px;
-            width: calc(#{$max-width} - 120px);
-            max-width: $max-width;
 
-            font-size: 20px;
-            padding: 0 20px;
-            border: 1px solid rgb(83, 95, 105);
-            @include input-placeholder {
-                font-weight: normal;
-                color: rgba(175, 175, 175, 1);
-                font-size: 16px;
-            }
-        }
-        a {
-            width: 100px;
-            height: 50px;
-            line-height: 50px;
-            margin-left: 15px;
-            text-decoration: none;
-            color: black;
-            border-radius: 10px;
-            font-size: 16px;
-            background-color: rgba(255, 205, 64, 1.00);
-        }
-        .reply-to {
-            &.active {
+        .input-box {
+            position: relative;
+            height: 100%;
+            background-color: rgb(83, 95, 105);
+            z-index: 2;
+            > * {
                 display: inline-block;
+                margin-top: 15px;
             }
+
+            .pop-up {
+                position: fixed;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                top: -100%;
+                left: 0;
+                background-color: rgba(123, 123, 123, 0.46);
+                z-index: 10;
+                opacity: 0;
+                @include transition(top opacity .5s);
+
+                .wanted-message-block {
+                    display: inline-block;
+                    width: 440px;
+                    background-color: rgb(253, 248, 238);
+                    margin-top: 155px;
+                    box-shadow: 1px 1px 7px rgb(179, 179, 179);
+                    border-radius: 10px;
+                    padding: 28px;
+
+                    .mail {
+                        display: inline-block;
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        border-radius: 50%;
+                        background-color: white;
+                        margin-bottom: 20px;
+                        box-shadow: 1px 1px 4px rgb(193, 193, 193);
+                        i {
+                            display: inline-block;
+                            line-height: 70px;
+                            font-size: 40px;
+                            color: rgba(121, 173, 42, 1.00);
+                        }
+                    }
+
+                    b {
+                        display: block;
+                        text-align: left;
+                        font-size: 17px;
+                        font-weight: normal;
+                        padding: 0 30px;
+                        margin-top: 10px;
+                    }
+
+                    .mail-title {
+                        text-align: center;
+                        margin-bottom: 10px;
+                        color: rgba(122, 172, 53, 1.00);
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+
+                    .control-btn {
+                        display: inline-block;
+                        width: 100%;
+                        margin-top: 40px;
+                        @include clearfix();
+                        border: 1px solid rgb(133, 197, 35);
+                        font-size: 17px;
+                        border-radius: 3px;
+                        overflow: hidden;
+                        > * {
+                            display: inline-block;
+                            float: left;
+                            width: 50%;
+                            height: 50px;
+                            line-height: 50px;
+                        }
+                        label.mail-cancel {
+                            background-color: white;
+                            color: rgba(135, 195, 52, 1.00);
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                        a.mail-send {
+                            text-decoration: none;
+                            color: white;      
+                            background-color: rgba(135, 195, 52, 1.00);                      
+                        }
+                    }
+                }
+            }
+
+            input[type="checkbox"] {
+                display: none;
+            }
+            input[type="text"] {
+                @include input(rgb(83, 95, 105), 50px);
+                border-radius: 10px;
+                width: calc(#{$max-width} - 120px);
+                max-width: $max-width;
+
+                font-size: 20px;
+                padding: 0 20px;
+                border: 1px solid rgb(83, 95, 105);
+                z-index: 2;
+                @include input-placeholder {
+                    font-weight: normal;
+                    color: rgba(175, 175, 175, 1);
+                    font-size: 16px;
+                }
+            }
+            .btn-i-want {
+                width: 100px;
+                height: 50px;
+                line-height: 50px;
+                margin-left: 15px;
+                color: black;
+                border-radius: 10px;
+                font-size: 16px;
+                background-color: rgba(255, 205, 64, 1.00);
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            #chb-wanted {
+                &:checked {
+                    ~ .pop-up {
+                        // display: inline-block;
+                        top: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .reply-to {
             position: fixed;
-            display: none;
+            &.active {
+                bottom: 80px;
+            }
+            display: inline-block;
             width: 100%;
             height: 50px;
             line-height: 50px;
             color: white;
             background-color: rgba(0, 0, 0, 0.78);
-            bottom: 80px;
+            bottom: -50px;
             left: 0;
             text-align: left;
+            font-size: 15px;
+            z-index: 1;
             padding-left: calc((100% - #{$max-width}) / 2);
+            @include transition(bottom .3s);
         }
     }
 }
