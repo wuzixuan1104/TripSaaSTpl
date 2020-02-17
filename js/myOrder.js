@@ -32,6 +32,7 @@ $(function() {
         }
     });
 
+
     var that = this;
 
     $('#loader_cover').fadeOut();
@@ -41,9 +42,21 @@ $(function() {
 
     $(window).on('hashchange', function() {
         if (!document.location.hash)
-            document.location.hash = origin ? origin : that.currentHash;
+            document.location.hash = origin ? origin : '#content-s-1';
         
-        that.currentHash = document.location.hash;
+        setTabActive(document.location.hash);
         $('html,body').animate({scrollTop: '0px'}, 0);
     }).trigger('hashchange');
 });
+
+function setTabActive(href) {
+  var active = false;
+  href = href.split('@')[0];
+  $('.process-list > a').each(function() {
+    if ($(this).attr('href') == href) {
+      $(this).addClass('active').siblings().removeClass('active');
+      active = true;
+    }
+  });
+
+}
