@@ -32,15 +32,18 @@ $(function() {
         }
     });
 
-    var anchor = $(location).attr('hash');
-    console.log(anchor);
+    var that = this;
 
-    $('.process-list > a').each(function() {
-      if ($(this).attr('href') == anchor)
-        $(this).addClass('active').siblings().removeClass('active');
+    $('#loader_cover').fadeOut();
 
-      $(this).click(function() {
-        $(this).addClass('active').siblings().removeClass('active');
-      })
-    });
+    var origin = document.location.hash;
+    document.location.hash = '';
+
+    $(window).on('hashchange', function() {
+        if (!document.location.hash)
+            document.location.hash = origin ? origin : that.currentHash;
+        
+        that.currentHash = document.location.hash;
+        $('html,body').animate({scrollTop: '0px'}, 0);
+    }).trigger('hashchange');
 });

@@ -134,7 +134,7 @@ html {
                     width: 100%;
                     z-index: 1;
 
-                    .row {
+                    .form-row {
                         display: flex;
                         flex-direction: column;
                         margin-bottom: 20px;
@@ -156,14 +156,20 @@ html {
                             }
                         }
 
-                        input[type="text"], input[type="password"] {
-                            @include input(rgb(141, 192, 81),40px);
+                        input[type="text"], input[type="password"], input[type="date"] {
+                            @include input(rgb(141, 192, 81),45px);
                             @include border-radius(5px);
                             font-size: 14px;
 
                             @include input-placeholder {
-                                font-size: 14px;
+                                font-size: 13px;
+                                font-weight: normal;
                             }
+                            padding: 0 15px;
+                            background-color: #f5f5f5;
+                            border: 1px solid transparent;
+                            background-clip: padding-box;
+                            @include box-shadow(inset 0 1px 3px 0 rgba(178, 178, 178, 0.5));
                         }
 
                         .checkbox {
@@ -192,55 +198,21 @@ html {
                     }
                 }
 
-                .error-mode {
+                .status-mode {
                     opacity: 1;
-                    margin-top: 40px;
+                    margin-top: calc(100% / 10);
 
                     @include transition(all 1.5s);
-                    
-                    span {
-                        display: inline-block;
-                        width: 70px;
-                        height: 70px;
-                        border-radius: 50%;
-                        color: white;
-                        border: 5px solid rgb(245, 97, 97);
-                        i {
-                            font-size: 40px;
-                            color: rgb(245, 97, 97);
-                            margin-top: 11px;
-                            font-weight: bold;
-                        }
-                    }
-
-                    h4 {
-                        color: rgb(245, 97, 97);
-                    }
-                }
-
-                .success-mode {
-                    opacity: 1;
-                    margin-top: 40px;
-
-                    @include transition(all 1.5s);
-                    
-                    span {
-                        display: inline-block;
-                        width: 70px;
-                        height: 70px;
-                        border-radius: 50%;
-                        color: white;
-                        border: 5px solid rgba(53, 151, 197, 1.00);
-                        i {
-                            font-size: 40px;
-                            color: rgba(53, 151, 197, 1.00);
-                            margin-top: 11px;
-                            font-weight: bold;
-                        }
-                    }
 
                     h4 {
                         color: rgba(53, 151, 197, 1.00);
+                        margin-top: 20px;
+                    }
+
+                    &.error {
+                        h4 {
+                            color: rgb(245, 91, 96);
+                        }
                     }
                 }
 
@@ -259,7 +231,7 @@ html {
                     left: 0;
                     top: 90px;
                     width: 100%;
-                    height: 322px;
+                    height: calc(100% - 100px);
                     line-height: 245px;
                     background-color: rgba(255, 255, 255, 0.65);
                     color: rgb(114, 167, 9);
@@ -274,32 +246,32 @@ html {
                     }
                 }
             }
-            .footer {
 
-                a.next-step {
-                    position: absolute;
-                    bottom: 40px;
-                    right: 40px;
-                    width: 50px;
-                    height: 50px;
-                    @include border-radius(50%);
-                    background-color: rgba(131, 184, 23, 1.00);
-                    color: white;
-                    text-decoration: none;
-                    box-shadow: 0 5px 10px 0 rgba(128, 128, 128, 0.3);
-                    i {
-                        margin-top: 11px;
-                        font-size: 27px;
-                    }
+            a.next-step {
+                position: absolute;
+                bottom: 40px;
+                right: 40px;
+                width: 50px;
+                height: 50px;
 
-                    span {
-                        display: inline-block;
-                        margin-top: 13px;
-                        margin-left: 5px;
-                    }
-                    &:hover {
-                        background-color: rgb(135, 169, 66);
-                    }
+
+                @include border-radius(50%);
+                background-color: rgba(131, 184, 23, 1.00);
+                color: white;
+                text-decoration: none;
+                box-shadow: 0 5px 10px 0 rgba(128, 128, 128, 0.3);
+                i {
+                    margin-top: 11px;
+                    font-size: 27px;
+                }
+
+                span {
+                    display: inline-block;
+                    margin-top: 13px;
+                    margin-left: 5px;
+                }
+                &:hover {
+                    background-color: rgb(135, 169, 66);
                 }
             }
 
@@ -358,6 +330,8 @@ html {
         }
         p.next-text {
             margin-top: 30px;
+            margin-bottom: 0;
+            color: rgb(106, 129, 141);
         }
     }
 
